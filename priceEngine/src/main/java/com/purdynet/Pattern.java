@@ -2,9 +2,8 @@ package com.purdynet;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Arrays;
+import java.math.RoundingMode;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -75,9 +74,19 @@ public class Pattern implements Serializable
     public Double getScore()
     {
         double factor = 1/(Math.log(timesSeen)/Math.log(2));
-        double freq = timesSuccessful/timesSeen;
+        double freq = new BigDecimal(timesSuccessful).divide(new BigDecimal(timesSeen),8, RoundingMode.HALF_EVEN).doubleValue();
         if(timesSeen==1) return new Double(0);
-        else return new BigDecimal(100*((1-factor)*(freq))).doubleValue();
+        else return new BigDecimal(numDash(pattern)*100*((1-factor)*(freq))).doubleValue();
     }
 
+    private Integer numDash(String pattern)
+    {
+        return numDash(pattern, 0);
+    }
+
+    private Integer numDash(String pattern, Integer accu)
+    {
+        if(pattern.contains("-")) return numDash(pattern.replaceFirst("-", ""), accu+1);
+        else return accu;
+    }
 }

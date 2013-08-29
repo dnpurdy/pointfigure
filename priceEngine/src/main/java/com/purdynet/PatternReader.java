@@ -3,9 +3,15 @@ package com.purdynet;
 import au.com.bytecode.opencsv.CSVReader;
 import com.purdynet.data.Downloader;
 import com.purdynet.data.impl.YahooDownloader;
+import com.purdynet.graph.PointFigureGraph;
+import com.purdynet.prices.PriceRecord;
+import com.purdynet.survey.SurveyResult;
 import org.apache.commons.io.FileUtils;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.*;
 
@@ -28,11 +34,15 @@ public class PatternReader
 
     public void run(String[] args)
     {
-        results = PatternContext.readFromFile("quarks.ser");
+        //results = PatternContext.readFromFile("quarks.ser");
         System.out.println(PatternContext.describe(results));
 
-        List<String> symbols = readSymbolFile("/home/dnpurdy/Desktop/spsym.csv");
+        //List<String> symbols = readSymbolFile("/home/dnpurdy/Desktop/spsym.csv");
+        List<String> symbols = Arrays.asList("GE");
+        List<SurveyResult> scores = new ArrayList<SurveyResult>();
 
+        int i = 1;
+        //List<String> symbols = Arrays.asList("APH","WAG");
         for(String sym : symbols)
         {
             try
@@ -48,38 +58,43 @@ public class PatternReader
                 List<PriceRecord> prices = parseFile(new File("/home/dnpurdy/pf/" + sym + ".csv"));
 
                 PointFigure pf = new PointFigure(prices, results.getCondition().getTestScaling());
+                PointFigureGraph pfg = new PointFigureGraph(prices, results.getCondition().getTestScaling());
 
-                Double score = new Double(0);
-                String pattern = "";
+                SurveyResult sr = new SurveyResult("", new Pattern(), 0.0);
+
                 for(int patternSize = results.getCondition().getMinPatternSize();
-                    patternSize <= results.getCondition().getMaxPatternSize();
+                    patternSize <= Math.min(results.getCondition().getMaxPatternSize(), pf.getNumberOfColumns());
                     patternSize++)
                 {
                     String patternCode = pf.getPatternCode(patternSize);
-                    Double curScore = results.getScores().get(patternCode);
-                    if(curScore!=null && curScore > score)
+                    if(results.getPatterns().containsKey(patternCode))
                     {
-                        score = curScore;
-                        pattern = patternCode;
+                        Double curScore = results.getPatterns().get(patternCode).getScore();
+
+                        if(curScore!=null && curScore > sr.getScore())
+                        {
+                            sr = new SurveyResult(sym, results.getPatterns().get(patternCode), curScore);
+                        }
                     }
                 }
 
-                System.out.println(sym+": "+pattern+" => "+score);
+                scores.add(sr);
+                i++;
+                System.out.println(i);
             }
             catch(IOException e)
             {
             }
         }
 
-        Double maxScore = new Double(0);
-        for(Map.Entry<String,Double> entry : results.getScores().entrySet())
+        Collections.sort(scores);
+        for(SurveyResult sr : scores)
         {
-            if(entry.getValue() > maxScore )
-            {
-                System.out.println(entry.getKey()+": "+entry.getValue().toString());
-                maxScore = entry.getValue();
-            }
+            System.out.println(sr.getSymbol()+": "+sr.getBestPattern().getPattern()+" ("+sr.getScore()+")");
+            System.out.println(" "+sr.getBestPattern().getSymbolSuccessful().size()+" symbols won/"+sr.getBestPattern().getSymbolsSeen().size());
+            System.out.println(" "+sr.getBestPattern().getTimesSuccessful()+" times won/"+sr.getBestPattern().getTimesSeen());
         }
+
     }
 
     public List<String> readSymbolFile(String filename)

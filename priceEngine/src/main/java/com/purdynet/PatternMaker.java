@@ -4,11 +4,9 @@ import au.com.bytecode.opencsv.CSVReader;
 import com.purdynet.conditions.Condition;
 import com.purdynet.data.Downloader;
 import com.purdynet.data.impl.YahooDownloader;
+import com.purdynet.prices.PriceRecord;
 import com.purdynet.scaling.Scaling;
-import com.purdynet.scaling.impl.LogScaling;
 import com.purdynet.scaling.impl.PercentScaling;
-import com.purdynet.scaling.impl.TraditionalScaling;
-import com.sun.deploy.util.ArrayUtil;
 import org.apache.commons.io.FileUtils;
 
 import java.io.*;
@@ -18,7 +16,6 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.logging.Level;
 
 /**
  * Created with IntelliJ IDEA.
@@ -43,109 +40,15 @@ public class PatternMaker
     {
         final Condition tCond = new Condition(ps, 25, 180, 2, 8);
 
+        //List<String> symbols = readSymbolFile("/home/dnpurdy/Desktop/spsym.csv");
+        List<String> symbols = Arrays.asList("GE");
+
         results.setCondition(tCond);
-        results.setSymbols(Arrays.asList("GE",
-                "F",
-                "AA",
-                "PFE",
-                "COLE",
-                "T",
-                "C",
-                "PHM",
-                "ABX",
-                "ELN",
-                "VALE",
-                "KO",
-                "SNV",
-                "ORCL",
-                "PBR",
-                "P",
-                "EMC",
-                "JPM",
-                "KGC",
-                "RAD",
-                "JCP",
-                "WFC",
-                "BSX",
-                "S",
-                "VZ",
-                "ITUB",
-                "FCX",
-                "HPQ",
-                "CHK",
-                "ALU",
-                "IAG",
-                "RF",
-                "JNJ",
-                "MRK",
-                "DHI",
-                "SID",
-                "NEM",
-                "ANR",
-                "GM",
-                "POT",
-                "XOM",
-                "DAL",
-                "GLW",
-                "AMD",
-                "NLY",
-                "LPR",
-                "ACI",
-                "TSM",
-                "AUY",
-                "NOK",
-                "SLW",
-                "MS",
-                "AIG",
-                "GG",
-                "ABT",
-                "X",
-                "XRX",
-                "HST",
-                "ECA",
-                "LEN",
-                "SAN",
-                "CLF",
-                "PG",
-                "ARR",
-                "HD",
-                "EGO",
-                "MT",
-                "HK",
-                "BMY",
-                "GGB",
-                "LOW",
-                "MO",
-                "HL",
-                "DIS",
-                "LCC",
-                "WLT",
-                "HAL",
-                "KEY",
-                "SWY",
-                "MOS",
-                "M",
-                "FMD",
-                "SU",
-                "WMT",
-                "TWO",
-                "ODP",
-                "GFI",
-                "EXC",
-                "MTG",
-                "KBH",
-                "SCHW",
-                "COP",
-                "AU",
-                "CX",
-                "TLM",
-                "USB",
-                "MGM",
-                "HMA" ));
+        results.setSymbols(symbols);
 
         final Map<String, Pattern> occuranceFreqMap = new ConcurrentHashMap<String, Pattern>();
 
-        ExecutorService es = Executors.newFixedThreadPool(4);
+        ExecutorService es = Executors.newFixedThreadPool(8);
         List<Callable<Void>> tasks = new ArrayList<Callable<Void>>();
         for(final String securitySym : results.getSymbols())
         {
@@ -153,6 +56,7 @@ public class PatternMaker
                 @Override
                 public Void call() throws Exception {
                     try {
+                        System.out.println(securitySym);
                         Downloader d = new YahooDownloader();
                         Calendar c = Calendar.getInstance();
                         c.set(2000, 0, 1);
@@ -278,5 +182,29 @@ public class PatternMaker
         }
 
 
+    }
+
+    public List<String> readSymbolFile(String filename)
+    {
+        List<String> ret = new ArrayList<String>();
+
+        FileReader fis;
+        BufferedReader reader = null;
+        String line;
+        try {
+            //Burn header
+            fis = new FileReader(filename);
+            reader = new BufferedReader(fis);
+            while((line = reader.readLine()) != null)
+            {
+                ret.add(line);
+            }
+            reader.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return ret;
     }
 }

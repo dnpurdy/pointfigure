@@ -1,5 +1,6 @@
 package com.purdynet;
 
+import com.purdynet.prices.PriceRecord;
 import com.purdynet.scaling.Scaling;
 
 import java.text.DecimalFormat;

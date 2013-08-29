@@ -10,7 +10,26 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>priceEngine</module>
+        <module>pf-core</module>
     </modules>
 
-
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.4</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.1</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
