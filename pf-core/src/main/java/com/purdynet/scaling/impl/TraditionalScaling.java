@@ -1,22 +1,17 @@
 package com.purdynet.scaling.impl;
 
-import com.purdynet.scaling.Scaling;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
  * User: dnpurdy
- * Date: 8/17/13
- * Time: 11:23 AM
+ * Date: 8/31/13
+ * Time: 12:33 AM
  * To change this template use File | Settings | File Templates.
  */
-public class TraditionalScaling implements Scaling
+public class TraditionalScaling extends ScalingA
 {
-    private List<BigDecimal> values;
-
     public TraditionalScaling()
     {
         BigDecimal i = new BigDecimal(0);
@@ -40,35 +35,4 @@ public class TraditionalScaling implements Scaling
         }
     }
 
-
-    @Override
-    public Integer getIdx(BigDecimal price)
-    {
-        int lowIdx = 0;
-        int highIdx = values.size();
-        int midIdx = (highIdx - lowIdx) / 2 + lowIdx;
-
-        while(lowIdx != midIdx && midIdx != highIdx)
-        {
-            BigDecimal lowVal = values.get(lowIdx);
-            BigDecimal midVal = values.get(midIdx);
-
-            if(price.compareTo(lowVal)>=0 && price.compareTo(midVal)<0)
-            {
-                highIdx = midIdx;
-                midIdx = (highIdx - lowIdx) / 2 + lowIdx;
-            }
-            else
-            {
-                lowIdx = midIdx;
-                midIdx = (highIdx - lowIdx) / 2 + lowIdx;
-            }
-        }
-        return lowIdx;
-    }
-
-    @Override
-    public List<BigDecimal> getValues() {
-        return values;
-    }
 }

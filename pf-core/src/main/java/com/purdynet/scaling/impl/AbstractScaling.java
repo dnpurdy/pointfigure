@@ -1,4 +1,4 @@
-package com.purdynet.scaling;
+package com.purdynet.scaling.impl;
 
 import java.math.BigDecimal;
 import java.util.List;
