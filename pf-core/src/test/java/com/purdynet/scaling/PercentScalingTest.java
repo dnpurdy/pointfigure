@@ -1,5 +1,6 @@
 package com.purdynet.scaling;
 
+import com.purdynet.scaling.impl.PercentScaling;
 import org.apache.commons.lang3.time.StopWatch;
 import org.junit.Test;
 

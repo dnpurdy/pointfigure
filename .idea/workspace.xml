@@ -1,64 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34b3dcec-748c-426b-ab50-5f4370e950bf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quarks-100sym-20130823.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/ColumnType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/LogScaling.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/LogScalingTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_14_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/persistence/MySQLAccess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumn.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PFColumnTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/PercentScaling.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PointFigureGraph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PointFigureGraphTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/PriceRecord.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/ScalingA.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/survey/SurveyResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/pf-core.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/pom.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PriceEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PriceRecord.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/data/Downloader.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/data/Downloader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/data/impl/YahooDownloader.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/data/impl/YahooDownloader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/scaling/Scaling.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/Scaling.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/scaling/impl/LogScaling.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/LogScaling.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/scaling/impl/PercentScaling.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/PercentScaling.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/scaling/impl/TraditionalScaling.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/TraditionalScaling.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/priceEngine/src/test/java/com/purdynet/scaling/impl/PercentScalingTest.java" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/PercentScalingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/Pattern.java" afterPath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/Pattern.java" />
+    <list default="true" id="34b3dcec-748c-426b-ab50-5f4370e950bf" name="Default" comment="More work">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/FileUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__hirondelle_date4j_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_2_11_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_6_1_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_1_3_1_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_asm_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/MongoUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/PatternDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PatternScores.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/ScoreRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/ScoreRecordTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/SymbolDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/SymbolHistory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/OccuranceFreq.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PFColumns$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PFColumns$XorO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PFColumns.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/Pattern.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PatternContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PatternMaker$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PatternMaker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PatternReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PointFigure$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PointFigure.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PriceEngine$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PriceEngine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PriceRecord.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/conditions/Condition.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/data/Downloader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/data/impl/YahooDownloader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/scaling/Scaling.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/scaling/impl/LogScaling.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/scaling/impl/PercentScaling.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/scaling/impl/TraditionalScaling.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/test-classes/com/purdynet/scaling/impl/PercentScalingTest.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/AbstractScaling.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/AbstractScaling.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/condition/Condition.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/condition/Condition.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/ContextCreator.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/ContextCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/DateUtil.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/DateUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/data/Downloader.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/data/Downloader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/LogScaling.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/LogScaling.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/LogScalingTest.java" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/LogScalingTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumn.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumn.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumnPartialReference.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumnPartialReference.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PFColumnTest.java" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PFColumnTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/PFColumnUtil.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/PFColumnUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/pattern/PatternContext.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/pattern/PatternContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/pattern/PatternInstance.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/pattern/PatternInstance.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternMaker.java" afterPath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternMaker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternReader.java" afterPath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PointFigure.java" afterPath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PointFigure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/PercentScaling.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/PercentScaling.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/PercentScalingTest.java" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/PercentScalingTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PointFigureGraph.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PointFigureGraph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PointFigureGraphTest.java" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PointFigureGraphTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PresentScore.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PresentScore.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/PriceRecord.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/PriceRecord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/TraditionalScaling.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/TraditionalScaling.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/data/impl/YahooDownloader.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/data/impl/YahooDownloader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/pf-core.iml" afterPath="$PROJECT_DIR$/pf-core/pf-core.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priceEngine/pom.xml" afterPath="$PROJECT_DIR$/priceEngine/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/pom.xml" afterPath="$PROJECT_DIR$/pf-core/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priceEngine/priceEngine.iml" afterPath="$PROJECT_DIR$/priceEngine/priceEngine.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pf.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377740275215" ignored="false" />
+    <file path="/fragment.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380209656449" ignored="false" />
     <file path="/PriceEngine.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377360359054" ignored="false" />
-    <file path="/PriceRecord.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377736766579" ignored="false" />
-    <file path="/pom.xml" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377735079553" ignored="false" />
+    <file path="/PriceRecord.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1378179570977" ignored="false" />
+    <file path="/pom.xml" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1379891604504" ignored="false" />
     <file path="/PointFigure.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1376775412372" ignored="false" />
     <file path="/PFColumns.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377734568375" ignored="false" />
     <file path="/Scaling.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1376756518228" ignored="false" />
-    <file path="/TraditionalScaling.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1376757084358" ignored="false" />
-    <file path="/Downloader.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1376757490449" ignored="false" />
-    <file path="/YahooDownloader.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377314422235" ignored="false" />
+    <file path="/TraditionalScaling.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377927337683" ignored="false" />
+    <file path="/Downloader.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1378100407565" ignored="false" />
+    <file path="/YahooDownloader.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1378179079782" ignored="false" />
     <file path="/OccuranceFreq.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1376872894597" ignored="false" />
-    <file path="/PercentScaling.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377648705925" ignored="false" />
+    <file path="/PercentScaling.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377927334455" ignored="false" />
     <file path="/PercentScalingTest.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377649256091" ignored="false" />
-    <file path="/Dummy.txt" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377736309786" ignored="false" />
+    <file path="/Dummy.txt" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380207780151" ignored="false" />
     <file path="/Condition.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377312741050" ignored="false" />
-    <file path="/PatternMaker.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377736912366" ignored="false" />
-    <file path="/PatternContext.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377359607783" ignored="false" />
+    <file path="/PatternMaker.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377980195877" ignored="false" />
+    <file path="/PatternContext.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1378008156429" ignored="false" />
     <file path="/PatternReader.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377737193345" ignored="false" />
     <file path="/Pattern.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377503853658" ignored="false" />
     <file path="/SurveyResult.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377401110422" ignored="false" />
@@ -66,14 +102,32 @@
     <file path="/TestMain.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377565765762" ignored="false" />
     <file path="/ScalingUtil.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377645943471" ignored="false" />
     <file path="/ScalingA.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377649160891" ignored="false" />
-    <file path="/LogScaling.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377649051138" ignored="false" />
+    <file path="/LogScaling.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377927330329" ignored="false" />
     <file path="/LogScalingTest.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377649315488" ignored="false" />
-    <file path="/PointFigureGraph.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377738549406" ignored="false" />
+    <file path="/PointFigureGraph.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1378185507472" ignored="false" />
     <file path="/ColumnType.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377734424055" ignored="false" />
     <file path="/PFColumnTest.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377734897009" ignored="false" />
-    <file path="/PFColumn.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377736530580" ignored="false" />
-    <file path="/GraphMaker.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377739041051" ignored="false" />
-    <file path="/PointFigureGraphTest.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377741426760" ignored="false" />
+    <file path="/PFColumn.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377970354095" ignored="false" />
+    <file path="/GraphMaker.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377971800185" ignored="false" />
+    <file path="/PointFigureGraphTest.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377971078296" ignored="false" />
+    <file path="/PFColumnPartialReference.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377904366673" ignored="false" />
+    <file path="/AbstractScaling.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377927383320" ignored="false" />
+    <file path="/PFColumnUtil.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377979771999" ignored="false" />
+    <file path="/ContextCreator.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1379882887057" ignored="false" />
+    <file path="/DateUtil.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1379891480853" ignored="false" />
+    <file path="/PatternInstance.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1378957945724" ignored="false" />
+    <file path="/PresentScore.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380209452680" ignored="false" />
+    <file path="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternReader.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1378853342733" ignored="false" />
+    <file path="/PatternScores.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1378954525013" ignored="false" />
+    <file path="/MongoUtils.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1379375571570" ignored="false" />
+    <file path="/SymbolDAO.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1379377117173" ignored="false" />
+    <file path="/PatternDAO.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380209096436" ignored="false" />
+    <file path="/SymbolHistory.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380209022584" ignored="false" />
+    <file path="/ScoreRecord.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380209185395" ignored="false" />
+    <file path="/TodaysScores.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380209734881" ignored="false" />
+    <file path="/FileUtil.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1379882494046" ignored="false" />
+    <file path="/ScoreRecordTest.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380208844866" ignored="false" />
+    <file path="/a.dummy" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380209575110" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +147,6 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -146,7 +199,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternMaker.java" line="111" class="com.purdynet.PatternMaker" package="com.purdynet">
+      <breakpoint url="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternMaker.java" line="118" class="com.purdynet.PatternMaker" package="com.purdynet">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -160,21 +213,6 @@
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
         <option name="CONDITION" value="line.length&lt;5&#13;&#13;JAVA" />
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternMaker.java" line="148" class="com.purdynet.PatternMaker" package="com.purdynet">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternMaker.java" line="71" class="com.purdynet.PatternMaker$1" package="com.purdynet">
         <option name="ENABLED" value="true" />
@@ -191,7 +229,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternReader.java" line="57" class="com.purdynet.PatternReader" package="com.purdynet">
+      <breakpoint url="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternReader.java" line="60" class="com.purdynet.PatternReader" package="com.purdynet">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -206,7 +244,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java" line="49" class="com.purdynet.graph.GraphMaker" package="com.purdynet.graph">
+      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java" line="50" class="com.purdynet.graph.GraphMaker" package="com.purdynet.graph">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -221,7 +259,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java" line="84" class="com.purdynet.graph.GraphMaker" package="com.purdynet.graph">
+      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java" line="88" class="com.purdynet.graph.GraphMaker" package="com.purdynet.graph">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -236,7 +274,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PointFigureGraph.java" line="48" class="com.purdynet.graph.PointFigureGraph" package="com.purdynet.graph">
+      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PointFigureGraph.java" line="102" class="com.purdynet.graph.PointFigureGraph" package="com.purdynet.graph">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -251,7 +289,52 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PointFigureGraphTest.java" line="32" class="com.purdynet.graph.PointFigureGraphTest" package="com.purdynet.graph">
+      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/ContextCreator.java" line="137" class="com.purdynet.app.ContextCreator" package="com.purdynet.app">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/ScoreRecord.java" line="21" class="com.purdynet.prices.ScoreRecord" package="com.purdynet.prices">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/ScoreRecordTest.java" line="24" class="com.purdynet.ScoreRecordTest" package="com.purdynet">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java" line="63" class="com.purdynet.app.TodaysScores" package="com.purdynet.app">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -267,6 +350,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -276,99 +360,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pf-core/pom.xml">
+      <file leaf-file-name="ContextCreator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/ContextCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PointFigureGraph.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PointFigureGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
+            <state line="137" column="74" selection-start="4652" selection-end="4705" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#369#388#0" expanded="true" />
-                <element signature="e#458#481#0" expanded="true" />
+                <element signature="e#4688#4702#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PointFigureGraphTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PointFigureGraphTest.java">
+      <file leaf-file-name="ScoreRecord.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/ScoreRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="953" selection-end="953" vertical-scroll-proportion="1.1294118">
+            <state line="19" column="11" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScoreRecordTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/ScoreRecordTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="41" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TodaysScores.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="6" selection-start="2621" selection-end="2621" vertical-scroll-proportion="0.64269143">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#566#579#0" expanded="true" />
+                <element signature="e#1715#1729#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Assert.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/Assert.java">
+      <file leaf-file-name="FileInputStream.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///usr/java/java7/src.zip!/java/io/FileInputStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="23" selection-start="3158" selection-end="3158" vertical-scroll-proportion="0.0">
+            <state line="137" column="0" selection-start="4560" selection-end="4560" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Arrays.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///usr/java/java7/src.zip!/java/util/Arrays.java">
+      <file leaf-file-name="FileReader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///usr/java/java7/src.zip!/java/io/FileReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2341" column="25" selection-start="103019" selection-end="103019" vertical-scroll-proportion="0.0">
+            <state line="57" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PatternMaker.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternMaker.java">
+      <file leaf-file-name="FileUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/FileUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1341" selection-end="1476" vertical-scroll-proportion="0.0">
+            <state line="25" column="0" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PatternReader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternReader.java">
+      <file leaf-file-name="PresentScore.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PresentScore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="6" selection-start="4067" selection-end="4741" vertical-scroll-proportion="0.0">
+            <state line="46" column="50" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraphMaker.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java">
+      <file leaf-file-name="SymbolHistory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/SymbolHistory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="38" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.0">
+            <state line="52" column="48" selection-start="1516" selection-end="1529" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1890#1903#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PFColumn.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumn.java">
+      <file leaf-file-name="PatternDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/PatternDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PriceRecord.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/PriceRecord.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="11" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
+            <state line="30" column="25" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -393,22 +475,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/ScalingA.java" />
-        <option value="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/PercentScalingTest.java" />
-        <option value="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/LogScalingTest.java" />
-        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/ColumnType.java" />
-        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumns.java" />
-        <option value="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PFColumnTeset.java" />
-        <option value="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PFColumnTest.java" />
-        <option value="$PROJECT_DIR$/priceEngine/pom.xml" />
-        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/PriceRecord.java" />
-        <option value="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PointFigure.java" />
-        <option value="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternMaker.java" />
-        <option value="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternReader.java" />
-        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java" />
-        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumn.java" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/pattern/PatternInstance.java" />
         <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PointFigureGraph.java" />
-        <option value="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PointFigureGraphTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/MongoUtils.java" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/DBClient.java" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/SymbolDAO.java" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/ContextCreator.java" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/DateUtil.java" />
+        <option value="$PROJECT_DIR$/pf-core/pom.xml" />
+        <option value="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/ScoreRecordTest.java" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/PatternDAO.java" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/SymbolHistory.java" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/ScoreRecord.java" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PresentScore.java" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java" />
       </list>
     </option>
   </component>
@@ -419,14 +501,62 @@
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="priceEngine" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="priceEngine" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="pf-core" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="pf-core" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
       </PATH>
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="66" />
-    <option name="y" value="32" />
-    <option name="width" value="1365" />
-    <option name="height" value="862" />
+    <option name="x" value="34" />
+    <option name="y" value="27" />
+    <option name="width" value="1390" />
+    <option name="height" value="872" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -437,7 +567,7 @@
     <OptionsSetting value="true" id="Edit" />
     <OptionsSetting value="true" id="Undo Check Out" />
     <OptionsSetting value="true" id="Get Latest Version" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -457,7 +587,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -486,90 +615,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="priceEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pointFigure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="priceEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pointFigure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="priceEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pointFigure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="priceEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="purdynet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pointFigure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="pf-core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -689,38 +734,8 @@
               <option name="myItemId" value="purdynet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pointFigure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pf-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="purdynet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="graph" />
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -753,13 +768,146 @@
               <option name="myItemId" value="purdynet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="pf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pointFigure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pf-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="purdynet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pointFigure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pf-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="purdynet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pattern" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pointFigure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pf-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="purdynet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="condition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pointFigure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pf-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="purdynet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -785,12 +933,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.purdynet.app" />
       <recent name="com.purdynet.scaling" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.purdynet.persistence" />
+      <recent name="com.purdynet.app" />
       <recent name="com.purdynet" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -799,35 +950,7 @@
       <recent name="com.purdynet" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PointFigureGraphTest">
-    <configuration default="false" name="PFColumnTest.testPFColumnEquals" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.purdynet.graph.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="pf-core" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.purdynet.graph" />
-      <option name="MAIN_CLASS_NAME" value="com.purdynet.graph.PFColumnTest" />
-      <option name="METHOD_NAME" value="testPFColumnEquals" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.TodaysScores">
     <configuration default="false" name="PatternMaker" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -836,11 +959,11 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.purdynet.PatternMaker" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -856,72 +979,96 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="PatternReader" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="ContextCreator" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.purdynet.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.purdynet.app.ContextCreator" />
+      <option name="VM_PARAMETERS" value="-Xmx4092m" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Desktop/spsym.csv" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="pf-core" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SymbolHistory" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.purdynet.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.purdynet.app.SymbolHistory" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="pf-core" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TodaysScores" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.purdynet.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.purdynet.app.TodaysScores" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Desktop/spsym.csv" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="pf-core" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ScoreRecordTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.purdynet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.purdynet.PatternReader" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="priceEngine" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Debug" />
-      <method />
-    </configuration>
-    <configuration default="false" name="GraphMaker" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.purdynet.graph.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.purdynet.graph.GraphMaker" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="pf-core" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="PointFigureGraphTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.purdynet.graph.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <module name="pf-core" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.purdynet.graph" />
-      <option name="MAIN_CLASS_NAME" value="com.purdynet.graph.PointFigureGraphTest" />
+      <option name="PACKAGE_NAME" value="com.purdynet" />
+      <option name="MAIN_CLASS_NAME" value="com.purdynet.ScoreRecordTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1036,19 +1183,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.PFColumnTest.testPFColumnEquals" />
-      <item index="1" class="java.lang.String" itemvalue="Application.PatternMaker" />
-      <item index="2" class="java.lang.String" itemvalue="Application.PatternReader" />
-      <item index="3" class="java.lang.String" itemvalue="Application.GraphMaker" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.PointFigureGraphTest" />
+      <item index="0" class="java.lang.String" itemvalue="Application.PatternMaker" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ContextCreator" />
+      <item index="2" class="java.lang.String" itemvalue="Application.SymbolHistory" />
+      <item index="3" class="java.lang.String" itemvalue="Application.TodaysScores" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ScoreRecordTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.PointFigureGraphTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.GraphMaker" />
-        <item index="2" class="java.lang.String" itemvalue="Application.PatternReader" />
-        <item index="3" class="java.lang.String" itemvalue="Application.PatternMaker" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.PFColumnTest.testPFColumnEquals" />
+        <item index="0" class="java.lang.String" itemvalue="Application.TodaysScores" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SymbolHistory" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ScoreRecordTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ContextCreator" />
+        <item index="4" class="java.lang.String" itemvalue="Application.PatternMaker" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1089,7 +1236,11 @@
       <created>1377400453631</created>
       <updated>1377400453631</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="More work">
+      <created>1377783516049</created>
+      <updated>1377783516049</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1113,33 +1264,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="32" width="1365" height="862" extended-state="0" />
+    <frame x="34" y="27" width="1390" height="872" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32863188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3286908" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931423" sideWeight="0.45234707" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5726375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4735376" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881865" sideWeight="0.6768212" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.5752089" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24867323" sideWeight="0.6713681" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36107194" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24217586" sideWeight="0.6713092" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4247911" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1185,7 +1336,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update VCS settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="More work" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1200,6 +1351,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Update VCS settings" />
+    <MESSAGE value="More work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1213,124 +1365,120 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PFColumnTest.java">
+    <entry file="jar:///usr/java/java7/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="93" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="302" selection-end="359" vertical-scroll-proportion="0.0">
+        <state line="1928" column="32" selection-start="76155" selection-end="76155" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/priceEngine/pom.xml">
+    <entry file="jar:///usr/java/java7/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="36" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0">
+        <state line="18" column="11" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/PercentScalingTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="7" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PFColumns.java">
+    <entry file="jar:///usr/java/java7/src.zip!/java/util/Date.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="233" selection-end="1458" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PointFigure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="36" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternMaker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1341" selection-end="1476" vertical-scroll-proportion="0.0">
+        <state line="634" column="59" selection-start="28062" selection-end="28062" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pf-core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="46" column="75" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternReader.java">
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/DateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="6" selection-start="4067" selection-end="4741" vertical-scroll-proportion="0.0">
+        <state line="12" column="30" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/java/java7/src.zip!/java/util/Arrays.java">
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/SymbolHistory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2341" column="25" selection-start="103019" selection-end="103019" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="38" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.0">
+        <state line="52" column="48" selection-start="1516" selection-end="1529" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1890#1903#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumn.java">
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/ScoreRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="19" column="11" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/PriceRecord.java">
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PresentScore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="11" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
+        <state line="46" column="50" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/Assert.java">
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/PatternDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="23" selection-start="3158" selection-end="3158" vertical-scroll-proportion="0.0">
+        <state line="30" column="25" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PointFigureGraph.java">
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/ContextCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
+        <state line="137" column="74" selection-start="4652" selection-end="4705" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#369#388#0" expanded="true" />
-            <element signature="e#458#481#0" expanded="true" />
+            <element signature="e#4688#4702#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PointFigureGraphTest.java">
+    <entry file="file://$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/ScoreRecordTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="953" selection-end="953" vertical-scroll-proportion="1.1294118">
+        <state line="33" column="41" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/java7/src.zip!/java/io/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/java7/src.zip!/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="0" selection-start="4560" selection-end="4560" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="6" selection-start="2621" selection-end="2621" vertical-scroll-proportion="0.64269143">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#566#579#0" expanded="true" />
+            <element signature="e#1715#1729#0" expanded="true" />
           </folding>
         </state>
       </provider>

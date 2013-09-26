@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,6 +15,7 @@ import java.util.Calendar;
  */
 public class PriceRecord implements Comparable<PriceRecord>
 {
+    private Date date;
     private Integer year;
     private Integer month;
     private Integer day;
@@ -24,7 +26,8 @@ public class PriceRecord implements Comparable<PriceRecord>
         final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         final Calendar c = Calendar.getInstance();
         try {
-            c.setTime(sdf.parse(dateString));
+            date = sdf.parse(dateString);
+            c.setTime(date);
             this.year = c.get(Calendar.YEAR);
             this.month = c.get(Calendar.MONTH)+1;
             this.day = c.get(Calendar.DAY_OF_MONTH);
@@ -53,7 +56,7 @@ public class PriceRecord implements Comparable<PriceRecord>
 
     @Override
     public String toString() {
-        return year.toString()+"-"+month.toString()+"-"+day.toString()+": "+price.toString();
+        return getDateCode()+": "+price.toString();
     }
 
     @Override
@@ -65,6 +68,7 @@ public class PriceRecord implements Comparable<PriceRecord>
 
     public String getDateCode()
     {
-        return getYear().toString()+getMonth().toString()+getDay().toString();
+        SimpleDateFormat dt1 = new SimpleDateFormat("yyyy-MM-dd");
+        return dt1.format(date);
     }
 }

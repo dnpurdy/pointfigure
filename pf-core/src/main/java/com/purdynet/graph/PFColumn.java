@@ -9,58 +9,35 @@ package com.purdynet.graph;
  */
 public class PFColumn
 {
-    private Integer startBoxIdx;
-    private Integer number;
+    private Integer lowBoxIdx;
+    private Integer highBoxIdx;
     private ColumnType colType;
-
-    public Integer getStartBoxIdx() {
-        return startBoxIdx;
-    }
 
     public Integer getLowBoxIdx()
     {
-        switch(colType)
-        {
-            case X:
-                return startBoxIdx;
-            case O:
-                return startBoxIdx-number+1;
-        }
-        return null;
+        return lowBoxIdx;
+    }
+
+    public void setLowBoxIdx(Integer lowBoxIdx)
+    {
+        this.lowBoxIdx = lowBoxIdx;
     }
 
     public Integer getHighBoxIdx()
     {
-        switch(colType)
-        {
-            case X:
-                return startBoxIdx+number;
-            case O:
-                return startBoxIdx;
-        }
-        return null;
+        return highBoxIdx;
     }
 
-    public PFColumn(Integer startBoxIdx, ColumnType colType)
+    public void setHighBoxIdx(Integer highBoxIdx)
     {
-        this.startBoxIdx = startBoxIdx;
-        this.colType = colType;
-        this.number = 1;
+        this.highBoxIdx = highBoxIdx;
     }
 
-    public PFColumn(Integer startBoxIdx, ColumnType colType, Integer number)
+    public PFColumn(Integer lowBoxIdx, Integer highBoxIdx, ColumnType colType)
     {
-        this.startBoxIdx = startBoxIdx;
+        this.lowBoxIdx = lowBoxIdx;
+        this.highBoxIdx = highBoxIdx;
         this.colType = colType;
-        this.number = number;
-    }
-
-    public Integer getNumber() {
-        return number;
-    }
-
-    public void setNumber(Integer number) {
-        this.number = number;
     }
 
     public ColumnType getColType() {
@@ -75,23 +52,28 @@ public class PFColumn
         PFColumn pfColumn = (PFColumn) o;
 
         if (colType != pfColumn.colType) return false;
-        if (!number.equals(pfColumn.number)) return false;
-        if (!startBoxIdx.equals(pfColumn.startBoxIdx)) return false;
+        if (highBoxIdx != null ? !highBoxIdx.equals(pfColumn.highBoxIdx) : pfColumn.highBoxIdx != null) return false;
+        if (lowBoxIdx != null ? !lowBoxIdx.equals(pfColumn.lowBoxIdx) : pfColumn.lowBoxIdx != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = startBoxIdx.hashCode();
-        result = 31 * result + number.hashCode();
-        result = 31 * result + colType.hashCode();
+        int result = lowBoxIdx != null ? lowBoxIdx.hashCode() : 0;
+        result = 31 * result + (highBoxIdx != null ? highBoxIdx.hashCode() : 0);
+        result = 31 * result + (colType != null ? colType.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString()
     {
-        return getNumber().toString()+getColType().name().toString();
+        return getNumber()+getColType().name().toString();
+    }
+
+    public Integer getNumber()
+    {
+        return highBoxIdx-lowBoxIdx+1;
     }
 }

@@ -1,5 +1,7 @@
 package com.purdynet.scaling.impl;
 
+import com.purdynet.scaling.Scaling;
+
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -10,14 +12,16 @@ import java.util.List;
  * Time: 6:26 PM
  * To change this template use File | Settings | File Templates.
  */
-public abstract class ScalingA
+public abstract class AbstractScaling implements Scaling
 {
     protected List<BigDecimal> values;
 
+    @Override
     public List<BigDecimal> getValues() {
         return values;
     }
 
+    @Override
     public Integer getIdx(BigDecimal searchValue)
     {
         return getIdxByBTree(searchValue);

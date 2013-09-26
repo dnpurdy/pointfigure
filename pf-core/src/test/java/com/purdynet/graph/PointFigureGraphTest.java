@@ -23,13 +23,20 @@ public class PointFigureGraphTest
     public void testSimpleGraph()
     {
         List<PriceRecord> testPrices = new ArrayList<PriceRecord>();
-        testPrices.add(new PriceRecord("2013-01-01", new BigDecimal(5.1)));
+        testPrices.add(new PriceRecord("2013-01-01", new BigDecimal(21.1)));
+        testPrices.add(new PriceRecord("2013-01-02", new BigDecimal(23.1)));
+        testPrices.add(new PriceRecord("2013-01-03", new BigDecimal(20.6)));
+        testPrices.add(new PriceRecord("2013-01-04", new BigDecimal(24.6)));
+        testPrices.add(new PriceRecord("2013-01-05", new BigDecimal(25.6)));
+        testPrices.add(new PriceRecord("2013-01-06", new BigDecimal(22.6)));
 
         PointFigureGraph pfg = new PointFigureGraph(testPrices, new TraditionalScaling());
-        assertEquals(1, pfg.getColumns().size());
 
-        testPrices.add(new PriceRecord("2013-01-02", new BigDecimal(10.1)));
-        pfg = new PointFigureGraph(testPrices, new TraditionalScaling());
-        assertEquals(1, pfg.getColumns().size());
+        assertEquals("1X", pfg.getPattern("2013-01-01"));
+        assertEquals("3X", pfg.getPattern("2013-01-02"));
+        assertEquals("3X-3O", pfg.getPattern("2013-01-03"));
+        assertEquals("3X-3O-4X", pfg.getPattern("2013-01-04"));
+        assertEquals("3X-3O-5X", pfg.getPattern("2013-01-05"));
+        assertEquals("3X-3O-5X-3O", pfg.getPattern("2013-01-06"));
     }
 }

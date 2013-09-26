@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Time: 12:33 AM
  * To change this template use File | Settings | File Templates.
  */
-public class TraditionalScaling extends ScalingA
+public class TraditionalScaling extends AbstractScaling
 {
     public TraditionalScaling()
     {

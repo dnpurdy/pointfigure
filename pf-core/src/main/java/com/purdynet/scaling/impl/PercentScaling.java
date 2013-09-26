@@ -12,7 +12,7 @@ import java.util.Collections;
  * Time: 6:28 PM
  * To change this template use File | Settings | File Templates.
  */
-public class PercentScaling extends ScalingA
+public class PercentScaling extends AbstractScaling
 {
     private Double percent;
 

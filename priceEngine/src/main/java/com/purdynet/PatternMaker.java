@@ -4,9 +4,12 @@ import au.com.bytecode.opencsv.CSVReader;
 import com.purdynet.conditions.Condition;
 import com.purdynet.data.Downloader;
 import com.purdynet.data.impl.YahooDownloader;
+import com.purdynet.graph.PFColumn;
+import com.purdynet.graph.PointFigureGraph;
 import com.purdynet.prices.PriceRecord;
 import com.purdynet.scaling.Scaling;
 import com.purdynet.scaling.impl.PercentScaling;
+import com.purdynet.util.PFColumnUtil;
 import org.apache.commons.io.FileUtils;
 
 import java.io.*;
@@ -41,7 +44,7 @@ public class PatternMaker
         final Condition tCond = new Condition(ps, 25, 180, 2, 8);
 
         //List<String> symbols = readSymbolFile("/home/dnpurdy/Desktop/spsym.csv");
-        List<String> symbols = Arrays.asList("GE");
+        List<String> symbols = Arrays.asList("WAG");
 
         results.setCondition(tCond);
         results.setSymbols(symbols);
@@ -86,8 +89,11 @@ public class PatternMaker
         }
 
         results.setPatterns(occuranceFreqMap);
-
-        PatternContext.writeToFile(results, "quarks.ser");
+        for(Map.Entry<String,Double> entry : results.getScores().entrySet())
+        {
+            if(entry.getValue()>0) System.out.println(entry.getKey()+": "+entry.getValue());
+        }
+        //PatternContext.writeToFile(results, "test.ser");
     }
 
     private void writeToFile() throws FileNotFoundException, IOException
@@ -126,14 +132,14 @@ public class PatternMaker
         List<PriceRecord> pricesSoFar = new ArrayList<PriceRecord>();
         Map<String,Set<Integer>> patternLocations = new HashMap<String,Set<Integer>>();
 
+        PointFigureGraph pfg = new PointFigureGraph(prices, s);
+
         for(int prIdx = 0; prIdx<prices.size(); prIdx++)
         {
-            pricesSoFar.add(prices.get(prIdx));
-            PointFigure pf = new PointFigure(pricesSoFar, s);
+            List<PFColumn> curCols = pfg.getColumnDateMap().get(prices.get(prIdx).getDateCode());
+            if(curCols.size()<testCondition.getMinPatternSize()+2) continue;
 
-            if(pf.getNumberOfColumns()<testCondition.getMinPatternSize()+2) continue;
-
-            int maxPatternSize = Math.min(testCondition.getMaxPatternSize(), pf.getNumberOfColumns() - testCondition.getMinPatternSize());
+            int maxPatternSize = Math.min(testCondition.getMaxPatternSize(), curCols.size() - testCondition.getMinPatternSize());
             boolean achievedReturn = false;
             BigDecimal runningPrice = prices.get(prIdx).getPrice();
             for(int futureIdx = prIdx; futureIdx<=Math.min(prIdx+testCondition.getDaysHorizon(), prices.size()-1); futureIdx++)
@@ -149,7 +155,7 @@ public class PatternMaker
 
             for(int patternSize = testCondition.getMinPatternSize(); patternSize <= maxPatternSize; patternSize++)
             {
-                String patternCode = pf.getPatternCode(patternSize);
+                String patternCode = PFColumnUtil.getPattern(curCols, patternSize);
 
                 //Add pattern location if we've never seen it before
                 if(patternLocations.get(patternCode)==null)
@@ -158,7 +164,7 @@ public class PatternMaker
                     patternLocations.put(patternCode,seenLocations);
                 }
 
-                if(!patternLocations.get(patternCode).contains(pf.getNumberOfColumns()))
+                if(!patternLocations.get(patternCode).contains(curCols.size()))
                 {
                     Pattern of = new Pattern();
                     of.setPattern(patternCode);
@@ -176,7 +182,7 @@ public class PatternMaker
                         of.addSymbolSeen(symbol);
                     }
                     occuranceFreqMap.put(patternCode, of);
-                    patternLocations.get(patternCode).add(pf.getNumberOfColumns());
+                    patternLocations.get(patternCode).add(curCols.size());
                 }
             }
         }

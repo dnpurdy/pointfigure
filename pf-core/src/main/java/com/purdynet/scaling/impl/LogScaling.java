@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Time: 7:17 PM
  * To change this template use File | Settings | File Templates.
  */
-public class LogScaling extends ScalingA
+public class LogScaling extends AbstractScaling
 {
     private double factor;
 

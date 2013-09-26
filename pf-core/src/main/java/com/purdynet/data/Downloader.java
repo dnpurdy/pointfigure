@@ -1,7 +1,10 @@
 package com.purdynet.data;
 
+import com.purdynet.prices.PriceRecord;
+
 import java.io.File;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,4 +15,6 @@ import java.util.Date;
  */
 public interface Downloader {
     File download(String symbol, Date start, Date end);
+
+    List<PriceRecord> getPrices(String symbol, Date start, Date end);
 }
