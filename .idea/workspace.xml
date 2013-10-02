@@ -1,79 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34b3dcec-748c-426b-ab50-5f4370e950bf" name="Default" comment="More work">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/FileUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__hirondelle_date4j_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_2_11_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_6_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_1_3_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_asm_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/MongoUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/PatternDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PatternScores.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/ScoreRecord.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/ScoreRecordTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/SymbolDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/SymbolHistory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/OccuranceFreq.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PFColumns$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PFColumns$XorO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PFColumns.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/Pattern.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PatternContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PatternMaker$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PatternMaker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PatternReader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PointFigure$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PointFigure.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PriceEngine$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PriceEngine.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/PriceRecord.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/conditions/Condition.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/data/Downloader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/data/impl/YahooDownloader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/scaling/Scaling.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/scaling/impl/LogScaling.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/scaling/impl/PercentScaling.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/classes/com/purdynet/scaling/impl/TraditionalScaling.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/priceEngine/target/test-classes/com/purdynet/scaling/impl/PercentScalingTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/AbstractScaling.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/AbstractScaling.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/condition/Condition.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/condition/Condition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/ContextCreator.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/ContextCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/DateUtil.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/DateUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/data/Downloader.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/data/Downloader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/LogScaling.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/LogScaling.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/LogScalingTest.java" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/LogScalingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumn.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumnPartialReference.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PFColumnPartialReference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PFColumnTest.java" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PFColumnTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/PFColumnUtil.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/PFColumnUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/pattern/PatternContext.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/pattern/PatternContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/pattern/PatternInstance.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/pattern/PatternInstance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternMaker.java" afterPath="$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/PatternMaker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/PercentScaling.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/PercentScaling.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/PercentScalingTest.java" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/scaling/PercentScalingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PointFigureGraph.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PointFigureGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PointFigureGraphTest.java" afterPath="$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/graph/PointFigureGraphTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PresentScore.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PresentScore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/PriceRecord.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/PriceRecord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/TraditionalScaling.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/TraditionalScaling.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/data/impl/YahooDownloader.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/data/impl/YahooDownloader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/pf-core.iml" afterPath="$PROJECT_DIR$/pf-core/pf-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/pom.xml" afterPath="$PROJECT_DIR$/pf-core/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priceEngine/priceEngine.iml" afterPath="$PROJECT_DIR$/priceEngine/priceEngine.iml" />
+    <list default="true" id="34b3dcec-748c-426b-ab50-5f4370e950bf" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/ConditionDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java" afterPath="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pf.iws" />
@@ -91,7 +21,7 @@
     <file path="/OccuranceFreq.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1376872894597" ignored="false" />
     <file path="/PercentScaling.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377927334455" ignored="false" />
     <file path="/PercentScalingTest.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377649256091" ignored="false" />
-    <file path="/Dummy.txt" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380207780151" ignored="false" />
+    <file path="/Dummy.txt" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380679936902" ignored="false" />
     <file path="/Condition.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377312741050" ignored="false" />
     <file path="/PatternMaker.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1377980195877" ignored="false" />
     <file path="/PatternContext.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1378008156429" ignored="false" />
@@ -128,6 +58,8 @@
     <file path="/FileUtil.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1379882494046" ignored="false" />
     <file path="/ScoreRecordTest.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380208844866" ignored="false" />
     <file path="/a.dummy" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380209575110" ignored="false" />
+    <file path="/ConditionDAO.java" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380680599691" ignored="false" />
+    <file path="/AddLiq.xml" changelist="34b3dcec-748c-426b-ab50-5f4370e950bf" time="1380415102731" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,42 +79,6 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="&#13;&#13;JAVA" />
-        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="&#13;&#13;JAVA" />
-        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
-      </breakpoint>
-    </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/priceEngine/src/main/java/com/purdynet/OccuranceFreq.java" line="92" class="com.purdynet.OccuranceFreq" package="com.purdynet">
         <option name="ENABLED" value="true" />
@@ -244,7 +140,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java" line="50" class="com.purdynet.graph.GraphMaker" package="com.purdynet.graph">
+      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/GraphMaker.java" line="49" class="com.purdynet.graph.GraphMaker" package="com.purdynet.graph">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -289,7 +185,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/ContextCreator.java" line="137" class="com.purdynet.app.ContextCreator" package="com.purdynet.app">
+      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/ContextCreator.java" line="134" class="com.purdynet.app.ContextCreator" package="com.purdynet.app">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -304,7 +200,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/ScoreRecord.java" line="21" class="com.purdynet.prices.ScoreRecord" package="com.purdynet.prices">
+      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/ScoreRecord.java" line="19" class="com.purdynet.prices.ScoreRecord" package="com.purdynet.prices">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -319,7 +215,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/ScoreRecordTest.java" line="24" class="com.purdynet.ScoreRecordTest" package="com.purdynet">
+      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/ScoreRecordTest.java" line="22" class="com.purdynet.ScoreRecordTest" package="com.purdynet">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -334,7 +230,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java" line="63" class="com.purdynet.app.TodaysScores" package="com.purdynet.app">
+      <breakpoint url="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java" line="62" class="com.purdynet.app.TodaysScores" package="com.purdynet.app">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -350,6 +246,42 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+      </breakpoint>
+    </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -360,42 +292,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ContextCreator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/ContextCreator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="74" selection-start="4652" selection-end="4705" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#4688#4702#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScoreRecord.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/ScoreRecord.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="11" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScoreRecordTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/ScoreRecordTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="41" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TodaysScores.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="6" selection-start="2621" selection-end="2621" vertical-scroll-proportion="0.64269143">
-              <folding>
-                <element signature="e#1715#1729#0" expanded="true" />
-              </folding>
+            <state line="92" column="12" selection-start="2904" selection-end="2904" vertical-scroll-proportion="0.58563536">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PresentScore.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PresentScore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Condition.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/condition/Condition.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scaling.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/Scaling.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="17" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractScaling.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/AbstractScaling.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="53" selection-start="1267" selection-end="1267" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConditionDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/ConditionDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="68" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -427,30 +373,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PresentScore.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PresentScore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="50" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SymbolHistory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/SymbolHistory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="48" selection-start="1516" selection-end="1529" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1890#1903#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PatternDAO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/PatternDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="25" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
+            <state line="28" column="9" selection-start="385" selection-end="944" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -475,8 +401,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/pattern/PatternInstance.java" />
-        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/graph/PointFigureGraph.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/MongoUtils.java" />
         <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/DBClient.java" />
@@ -490,6 +414,8 @@
         <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/SymbolHistory.java" />
         <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/ScoreRecord.java" />
         <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PresentScore.java" />
+        <option value="$USER_HOME$/Desktop/AddLiq.xml" />
+        <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/ConditionDAO.java" />
         <option value="$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java" />
       </list>
     </option>
@@ -587,6 +513,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -833,6 +760,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="persistence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pointFigure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pf-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="purdynet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="pattern" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -871,43 +832,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pointFigure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pf-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="purdynet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -920,6 +846,7 @@
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/AddLiq.xml" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -1240,7 +1167,11 @@
       <created>1377783516049</created>
       <updated>1377783516049</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="More work">
+      <created>1380209966582</created>
+      <updated>1380209966582</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1267,10 +1198,9 @@
     <frame x="34" y="27" width="1390" height="872" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3286908" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931423" sideWeight="0.45234707" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4735376" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1278,7 +1208,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1286,11 +1216,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.5752089" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24217586" sideWeight="0.6713092" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24217586" sideWeight="0.5752089" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4247911" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1365,41 +1296,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/java/java7/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1928" column="32" selection-start="76155" selection-end="76155" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/java7/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/java7/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="634" column="59" selection-start="28062" selection-end="28062" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pf-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="75" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/util/DateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="30" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
@@ -1409,46 +1305,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/SymbolHistory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="48" selection-start="1516" selection-end="1529" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1890#1903#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="53" column="48" selection-start="1508" selection-end="1521" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/prices/ScoreRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="11" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PresentScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="50" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/PatternDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="25" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="16" column="11" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/ContextCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="74" selection-start="4652" selection-end="4705" vertical-scroll-proportion="0.0">
+        <state line="131" column="61" selection-start="4471" selection-end="4524" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#4688#4702#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4507#4521#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pf-core/src/test/java/com/purdynet/ScoreRecordTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="41" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
+        <state line="31" column="41" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1474,12 +1355,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/Scaling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="17" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/AddLiq.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="90" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.7125891" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/scaling/impl/AbstractScaling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="53" selection-start="1267" selection-end="1267" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/condition/Condition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/PatternDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="9" selection-start="385" selection-end="944" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/persistence/ConditionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="68" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/PresentScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pf-core/src/main/java/com/purdynet/app/TodaysScores.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="6" selection-start="2621" selection-end="2621" vertical-scroll-proportion="0.64269143">
-          <folding>
-            <element signature="e#1715#1729#0" expanded="true" />
-          </folding>
+        <state line="92" column="12" selection-start="2904" selection-end="2904" vertical-scroll-proportion="0.58563536">
+          <folding />
         </state>
       </provider>
     </entry>

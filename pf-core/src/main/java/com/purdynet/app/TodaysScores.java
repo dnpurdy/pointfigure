@@ -90,7 +90,7 @@ public class TodaysScores
         Collections.sort(todaysScores);
         for(PresentScore sym : todaysScores)
         {
-            System.out.println(sym.getSymbol()+": "+sym.getPi().getScore()+" -- "+sym.getPi());
+            System.out.println(sym.getSymbol()+": "+sym.getScore()+" -- "+sym.getPi());
         }
     }
 }
