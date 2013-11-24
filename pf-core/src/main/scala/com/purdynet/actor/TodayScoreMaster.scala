@@ -1,9 +1,9 @@
 package com.purdynet.actor
 
 import akka.actor.{Props, Actor, ActorRef}
-import akka.routing.RoundRobinRouter
+import akka.routing.RoundRobinPool
 import com.purdynet.app.PresentScore
-import com.purdynet.message.TodayScoreWork
+import com.purdynet.message.{EmptyReply, TodayScoreWork}
 import com.mongodb.DB
 import com.purdynet.condition.Condition
 
@@ -13,7 +13,7 @@ import com.purdynet.condition.Condition
  * Date: 11/22/13
  * Time: 4:29 PM
  */
-class TodayScoreMaster(nrOfWorkers: Int, db: DB, tCond: Condition, syms: List[String]) extends Actor {
+class TodayScoreMaster(nrOfWorkers: Int, db: DB, tCond: Condition, syms: List[String], listener: ActorRef) extends Actor {
 
   var pi: Double = _
   var todaysScores: List[PresentScore] = List()
@@ -21,17 +21,25 @@ class TodayScoreMaster(nrOfWorkers: Int, db: DB, tCond: Condition, syms: List[St
   val start: Long = System.currentTimeMillis
 
   val workerRouter = context.actorOf(
-    Props[TodayScoreActor].withRouter(RoundRobinRouter(nrOfWorkers)), name = "workerRouter")
+    Props[TodayScoreActor].withRouter(RoundRobinPool(nrOfWorkers)), name = "workerRouter")
 
   def receive = {
     case x: String => {
-      for (i <- 1 to syms.size) workerRouter ! TodayScoreWork(db, syms(i), tCond)
+      for (i <- 1 to syms.size) workerRouter ! TodayScoreWork(db, syms(i-1), tCond)
     }
     case x: PresentScore => {
       nrOfResults += 1
-      if(x!=null) x::todaysScores
+      if(x!=null) todaysScores = x::todaysScores
       if (nrOfResults == syms.size) {
-        sender ! todaysScores
+        listener ! todaysScores
+        context.stop(self)
+      }
+    }
+    case x: EmptyReply => {
+      nrOfResults += 1
+      if (nrOfResults == syms.size) {
+        listener ! todaysScores
+        context.stop(self)
       }
     }
   }

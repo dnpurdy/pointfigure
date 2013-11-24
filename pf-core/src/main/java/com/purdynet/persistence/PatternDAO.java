@@ -34,4 +34,23 @@ public class PatternDAO
         DBObject obj = collection.findOne(new BasicDBObject("pattern", pattern));
         return obj != null ? (double) obj.get("score") : 0.0;
     }
+
+    public static PatternInstance getPatternInstance(DB db, String collectionName, String pattern)
+    {
+        DBCollection collection = db.getCollection(collectionName);
+        DBObject obj = collection.findOne(new BasicDBObject("pattern", pattern));
+
+        if(obj!=null)
+        {
+            PatternInstance pi = new PatternInstance();
+            pi.setPattern((String) obj.get("pattern"));
+            pi.setTimesSeen((Integer) obj.get("timesSeen"));
+            pi.setTimesSuccessful((Integer) obj.get("timesSuccessful"));
+            return pi;
+        }
+        else
+        {
+            return null;
+        }
+    }
 }

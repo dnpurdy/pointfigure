@@ -10,12 +10,9 @@ import com.purdynet.app.PresentScore
 import com.purdynet.persistence.PatternDAO
 import java.lang.Double
 import com.purdynet.pattern.PatternInstance
-import com.purdynet.prices.PriceRecord
-import com.purdynet.message.TodayScoreWork
+import com.purdynet.message.{EmptyReply, TodayScoreWork}
 import com.purdynet.condition.Condition
 
-import scala.collection.JavaConverters._
-import scala.collection.JavaConversions._
 import com.mongodb.DB
 
 /**
@@ -31,6 +28,7 @@ class TodayScoreActor extends Actor with ActorLogging {
   }
 
   def RunTodayScore(msg: TodayScoreWork) {
+    log.info(msg.sym)
     val securitySym: String = msg.sym
     val tCond: Condition = msg.testCondition
     val db: DB = msg.db
@@ -55,12 +53,13 @@ class TodayScoreActor extends Actor with ActorLogging {
         }
         i += 1
       }
-      sender ! ps
+      if(ps!=null) sender ! ps
+      else sender ! new EmptyReply
     }
     catch {
       case e: Exception => {
         e.printStackTrace
-        sender ! null
+        sender ! new EmptyReply
       }
     }
   }

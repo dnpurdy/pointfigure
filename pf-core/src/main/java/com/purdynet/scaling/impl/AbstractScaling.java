@@ -2,6 +2,7 @@ package com.purdynet.scaling.impl;
 
 import com.purdynet.scaling.Scaling;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * Time: 6:26 PM
  * To change this template use File | Settings | File Templates.
  */
-public abstract class AbstractScaling implements Scaling
+public abstract class AbstractScaling implements Scaling, Serializable
 {
     protected List<BigDecimal> values;
 

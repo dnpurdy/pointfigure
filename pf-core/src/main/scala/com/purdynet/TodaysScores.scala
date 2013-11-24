@@ -1,23 +1,16 @@
 package com.purdynet
 
-import com.purdynet.util.{DateUtil, FileUtil}
+import com.purdynet.util.FileUtil
 import com.purdynet.condition.Condition
 import com.purdynet.scaling.impl.PercentScaling
 import com.mongodb.{DB, MongoClient}
-import com.purdynet.persistence.{PatternDAO, MongoUtils}
-import com.purdynet.data.Downloader
-import com.purdynet.data.impl.YahooDownloader
-import java.util.{Collections, Date}
-import com.purdynet.graph.PointFigureGraph
-import com.purdynet.app.PresentScore
-import java.lang.Double
-import com.purdynet.pattern.PatternInstance
-import akka.actor.{Props, ActorSystem}
-import com.purdynet.actor.TodayScoreMaster
+import com.purdynet.persistence.MongoUtils
+import com.purdynet.actor.{TodayScoreListener, TodayScoreMaster}
 import akka.actor._
-import akka.pattern.ask
+import scala.concurrent.duration._
 
 import scala.collection.JavaConverters._
+import akka.util.Timeout
 
 /**
  * Created with IntelliJ IDEA.
@@ -41,6 +34,7 @@ class TodaysScores {
 
   def run {
     val symbols: List[String] = FileUtil.getSymbolsFromFile(filename).asScala.toList
+    //val symbols: List[String] = List("GE","VZ","WAG")
     val tCond: Condition = new Condition(new PercentScaling(0.01), 25, 120, 2, 15)
     val mongoClient: MongoClient = MongoUtils.getClient
     val db: DB = mongoClient.getDB("1382630345634")
@@ -48,11 +42,13 @@ class TodaysScores {
     var count: Int = 0
 
     val system = ActorSystem("TodayScoreSystem")
-
+    val listener = system.actorOf(Props[TodayScoreListener], name = "listener")
     // create the master
-    val master = system.actorOf(Props(new TodayScoreMaster(8, db, tCond, symbols)), name = "master")
+    val master = system.actorOf(Props(new TodayScoreMaster(16, db, tCond, symbols, listener)), name = "master")
+
+    implicit val timeout = Timeout(10 minutes)
 
     // start the calculation
-    val todaysScores = master ? "GO"
+    val todaysScores = master ! "GO"
   }
 }

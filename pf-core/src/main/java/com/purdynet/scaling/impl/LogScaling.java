@@ -12,6 +12,8 @@ import java.util.ArrayList;
  */
 public class LogScaling extends AbstractScaling
 {
+    static final long serialVersionUID = 201311232009010001L;
+
     private double factor;
 
     public LogScaling(double factor)

@@ -41,6 +41,18 @@ public class PresentScore implements Comparable<PresentScore>
         return score;
     }
 
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public void setPi(PatternInstance pi) {
+        this.pi = pi;
+    }
+
+    public void setScore(Double score) {
+        this.score = score;
+    }
+
     @Override
     public int compareTo(PresentScore o)
     {

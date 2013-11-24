@@ -14,7 +14,13 @@ import java.util.Collections;
  */
 public class PercentScaling extends AbstractScaling
 {
+    static final long serialVersionUID = 201311232009010002L;
+
     private Double percent;
+
+    public Double getPercent() {
+        return percent;
+    }
 
     public PercentScaling(Double percent)
     {

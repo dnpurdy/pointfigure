@@ -6,17 +6,13 @@ import com.purdynet.condition.Condition;
 import com.purdynet.data.Downloader;
 import com.purdynet.data.impl.YahooDownloader;
 import com.purdynet.graph.PointFigureGraph;
+import com.purdynet.persistence.ConditionDAO;
 import com.purdynet.persistence.MongoUtils;
 import com.purdynet.persistence.PatternDAO;
 import com.purdynet.prices.PriceRecord;
-import com.purdynet.scaling.impl.PercentScaling;
 import com.purdynet.util.DateUtil;
-import com.purdynet.util.FileUtil;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -44,13 +40,14 @@ public class TodaysScores
 
     public void run()
     {
-        List<String> symbols = FileUtil.getSymbolsFromFile(filename);
+        //List<String> symbols = FileUtil.getSymbolsFromFile(filename);
+        List<String> symbols = Arrays.asList("GE");
 
-        final Condition tCond = new Condition(new PercentScaling(0.01), 25, 120, 2, 15);
 
-        MongoClient mongoClient = MongoUtils.getClient();
-        DB db = mongoClient.getDB("1379378527650");
 
+        MongoClient mongoClient = MongoUtils.getClient("localhost");
+        DB db = mongoClient.getDB("1385259305852");
+        final Condition tCond = ConditionDAO.getCondition(db, "condition");
         int size = symbols.size();
         int count = 0;
         List<PresentScore> todaysScores = new ArrayList<PresentScore>();

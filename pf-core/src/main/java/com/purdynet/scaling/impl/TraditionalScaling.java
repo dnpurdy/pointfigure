@@ -12,6 +12,8 @@ import java.util.ArrayList;
  */
 public class TraditionalScaling extends AbstractScaling
 {
+    static final long serialVersionUID = 201311232009010003L;
+
     public TraditionalScaling()
     {
         BigDecimal i = new BigDecimal(0);

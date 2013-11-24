@@ -10,6 +10,7 @@ import com.purdynet.graph.PFColumn;
 import com.purdynet.graph.PointFigureGraph;
 import com.purdynet.pattern.PatternContext;
 import com.purdynet.pattern.PatternInstance;
+import com.purdynet.persistence.ConditionDAO;
 import com.purdynet.persistence.MongoUtils;
 import com.purdynet.persistence.PatternDAO;
 import com.purdynet.persistence.SymbolDAO;
@@ -55,6 +56,7 @@ public class ContextCreator
     public void run()
     {
         List<String> symbols = FileUtil.getSymbolsFromFile(filename);
+
         final Condition tCond = new Condition(new PercentScaling(0.01), 25, 120, 2, 15);
         final Map<String, PatternInstance> occuranceFreqMap = new ConcurrentHashMap<String, PatternInstance>();
 
@@ -62,13 +64,11 @@ public class ContextCreator
         String runId = String.valueOf(System.currentTimeMillis());
         DB db = mongoClient.getDB(runId);
 
-        symbols = FileUtil.getSymbolsFromFile(filename);
-        //symbols = Arrays.asList("WAG","EBAY","ECL","EIX","EW","EA","EMC","EMR","ESV","ETR","EOG","EQT","EFX","EQR");
-
         for(String symbol : symbols)
         {
             SymbolDAO.create(db, "symbols", symbol);
         }
+        ConditionDAO.create(db, "condition", tCond);
 
         results.setCondition(tCond);
         results.setSymbols(symbols);
