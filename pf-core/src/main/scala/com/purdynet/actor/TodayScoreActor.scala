@@ -1,19 +1,19 @@
 package com.purdynet.actor
 
-import akka.actor.{ActorLogging, Actor}
+import java.lang.Double
+import java.util.Date
+
+import akka.actor.{Actor, ActorLogging}
+import com.mongodb.DB
+import com.purdynet.app.PresentScore
+import com.purdynet.condition.Condition
 import com.purdynet.data.Downloader
 import com.purdynet.data.impl.YahooDownloader
-import com.purdynet.util.DateUtil
-import java.util.Date
 import com.purdynet.graph.PointFigureGraph
-import com.purdynet.app.PresentScore
-import com.purdynet.persistence.PatternDAO
-import java.lang.Double
-import com.purdynet.pattern.PatternInstance
 import com.purdynet.message.{EmptyReply, TodayScoreWork}
-import com.purdynet.condition.Condition
-
-import com.mongodb.DB
+import com.purdynet.pattern.PatternInstance
+import com.purdynet.persistence.PatternDAO
+import com.purdynet.util.DateUtil
 
 /**
  * Created with IntelliJ IDEA.
@@ -34,11 +34,11 @@ class TodayScoreActor extends Actor with ActorLogging {
     val db: DB = msg.db
     try {
       val d: Downloader = new YahooDownloader
-      val prices = d.getPrices(securitySym, DateUtil.getDate(2001, 1, 1), new Date)
-      val pfg: PointFigureGraph = new PointFigureGraph(prices, tCond.getTestScaling)
+      val prices = d.getPrices(securitySym, DateUtil.getDate(2016, 1, 1), new Date)
+      val pfg: PointFigureGraph = new PointFigureGraph(prices, tCond.testScaling)
       var ps: PresentScore = null
-      var i: Int = tCond.getMinPatternSize
-      while (i <= tCond.getMaxPatternSize) {
+      var i: Int = tCond.minPatternSize
+      while (i <= tCond.maxPatternSize) {
         if (ps == null) {
           ps = new PresentScore(securitySym, PatternDAO.getScore(db, "patterns", pfg.getPattern(i)))
           ps.setPi(PatternDAO.getPatternInstance(db, "patterns", pfg.getPattern(i)))

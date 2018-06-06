@@ -58,17 +58,17 @@ public class SymbolHistory
 
         Downloader d = new YahooDownloader();
         List<PriceRecord> prices = d.getPrices(symbol, DateUtil.getDate(2001, 1, 1), new Date());
-        PointFigureGraph pfg = new PointFigureGraph(prices, tCond.getTestScaling());
+        PointFigureGraph pfg = new PointFigureGraph(prices, tCond.testScaling());
 
         List<ScoreRecord> scoreRecords = new ArrayList<ScoreRecord>();
         for(String dateCode : pfg.getColumnDateMap().keySet())
         {
             List<PFColumn> curCols = pfg.getColumnDateMap().get(dateCode);
-            if(curCols.size()<tCond.getMinPatternSize()+2) continue;
+            if(curCols.size()<tCond.minPatternSize()+2) continue;
 
-            int maxPatternSize = Math.min(tCond.getMaxPatternSize(), curCols.size() - tCond.getMinPatternSize());
+            int maxPatternSize = Math.min(tCond.maxPatternSize(), curCols.size() - tCond.minPatternSize());
             double score = 0.0;
-            for(int patternSize = tCond.getMinPatternSize(); patternSize <= maxPatternSize; patternSize++)
+            for(int patternSize = tCond.minPatternSize(); patternSize <= maxPatternSize; patternSize++)
             {
                 String patternCode = PFColumnUtil.getPattern(curCols, patternSize);
                 double curScore = PatternDAO.getScore(db, "patterns", patternCode);

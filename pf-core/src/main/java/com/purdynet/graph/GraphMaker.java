@@ -86,7 +86,7 @@ public class GraphMaker
         for(PFColumn col : colList)
         {
             sb.append(col.getNumber().toString());
-            sb.append(col.getColType().name());
+            sb.append(col.getColumnType().name());
             //sb.append("(");
             //sb.append(s.getValues().get(col.getLowBoxIdx()));
             //sb.append(":");

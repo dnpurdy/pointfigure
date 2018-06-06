@@ -1,11 +1,13 @@
 package com.purdynet.graph;
 
 import com.purdynet.prices.PriceRecord;
+import com.purdynet.prices.SPriceRecord;
 import com.purdynet.scaling.Scaling;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,11 +27,19 @@ public class PointFigureGraph
         return columnDateMapTwo;
     }
 
+    public PointFigureGraph(Scaling s, List<SPriceRecord> prices) {
+        this(prices.stream().map(pr -> new PriceRecord(pr.getDateStr(), pr.getJavaPrice())).collect(Collectors.toList()), s);
+    }
+
     public PointFigureGraph(List<PriceRecord> prices, Scaling s)
     {
         this.scaling = s;
 
-        Collections.sort(prices);
+        try {
+            Collections.sort(prices);
+        } catch (Exception e) {
+            //
+        }
 
         Integer startPrice = null;
         for(PriceRecord pr : prices)
@@ -47,7 +57,7 @@ public class PointFigureGraph
 
             PFColumn lastCol = columns.get(columns.size()-1);
 
-            switch(lastCol.getColType())
+            switch(lastCol.getColumnType())
             {
                 case X:
                     if(lastCol.getHighBoxIdx() - currentPriceBoxIdx >= 3)
@@ -100,18 +110,36 @@ public class PointFigureGraph
     public String getPattern(String datecode)
     {
         PFColumnPartialReference ref = columnDateMapTwo.get(datecode);
-        if(ref.getStopColIdx()<0) return ref.getPostfixCol();
+        if(ref.stopColIdx()<0) return ref.postfixCol();
         else
         {
             StringBuilder pattern = new StringBuilder();
-            for(int i=0; i<=ref.getStopColIdx(); i++)
+            for(int i=0; i<=ref.stopColIdx(); i++)
             {
                 pattern.append(columns.get(i).toString());
                 pattern.append("-");
             }
-            pattern.append(ref.getPostfixCol());
+            pattern.append(ref.postfixCol());
             return pattern.toString();
         }
+    }
+
+    public String getPattern(String datecode, Integer length)
+    {
+        List<PFColumn> ref = columnDateMap.get(datecode);
+
+            StringBuilder pattern = new StringBuilder();
+            for(int i=length; i>0; i--)
+            {
+                if (i<=ref.size()) {
+                    pattern.append(ref.get(ref.size()-i).getCode());
+                } else {
+                    pattern.append("0");
+                }
+                pattern.append(",");
+            }
+            return pattern.toString();
+
     }
 
     public String getPattern(Integer length)
@@ -125,6 +153,7 @@ public class PointFigureGraph
         pattern.append(columns.get(columns.size()-1));
         return pattern.toString();
     }
+
 
     public void render()
     {
@@ -146,7 +175,7 @@ public class PointFigureGraph
             for(int j=0; j<width; j++)
             {
                 PFColumn curCol = columns.get(j);
-                switch(columns.get(j).getColType())
+                switch(columns.get(j).getColumnType())
                 {
                     case X:
                         if(curCol.getLowBoxIdx()<=i && curCol.getHighBoxIdx()>=i) sb.append("X");

@@ -17,7 +17,7 @@ class TodayScoreListener extends Actor {
       {
         println(i)
       }
-      context.system.shutdown()
+      context.system.terminate()
     }
   }
 }

@@ -1,16 +1,15 @@
 package com.purdynet
 
-import com.purdynet.util.FileUtil
-import com.purdynet.condition.Condition
-import com.purdynet.scaling.impl.PercentScaling
-import com.mongodb.{DB, MongoClient}
-import com.purdynet.persistence.MongoUtils
-import com.purdynet.actor.{TodayScoreListener, TodayScoreMaster}
 import akka.actor._
-import scala.concurrent.duration._
-
-import scala.collection.JavaConverters._
 import akka.util.Timeout
+import com.mongodb.{DB, MongoClient}
+import com.purdynet.actor.{TodayScoreListener, TodayScoreMaster}
+import com.purdynet.condition.Condition
+import com.purdynet.persistence.MongoUtils
+import com.purdynet.scaling.impl.PercentScaling
+import com.purdynet.util.FileUtil
+
+import scala.concurrent.duration._
 
 /**
  * Created with IntelliJ IDEA.
@@ -33,11 +32,11 @@ class TodaysScores {
   }
 
   def run {
-    val symbols: List[String] = FileUtil.getSymbolsFromFile(filename).asScala.toList
+    val symbols: List[String] = FileUtil.getSymbolsFromFile(filename)
     //val symbols: List[String] = List("GE","VZ","WAG")
     val tCond: Condition = new Condition(new PercentScaling(0.01), 25, 120, 2, 15)
     val mongoClient: MongoClient = MongoUtils.getClient
-    val db: DB = mongoClient.getDB("1382630345634")
+    val db: DB = mongoClient.getDB("1528000332712")
     val size: Int = symbols.size
     var count: Int = 0
 

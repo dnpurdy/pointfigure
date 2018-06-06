@@ -5,6 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created with IntelliJ IDEA.
@@ -70,5 +71,10 @@ public class PriceRecord implements Comparable<PriceRecord>
     {
         SimpleDateFormat dt1 = new SimpleDateFormat("yyyy-MM-dd");
         return dt1.format(date);
+    }
+
+    public long daysBetween(PriceRecord o) {
+        long diff = o.date.getTime() - this.date.getTime();
+        return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
 }

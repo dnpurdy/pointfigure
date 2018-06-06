@@ -55,7 +55,7 @@ public class ContextCreator
 
     public void run()
     {
-        List<String> symbols = FileUtil.getSymbolsFromFile(filename);
+        List<String> symbols = FileUtil.getSymbolsFromFileJava(filename);
 
         final Condition tCond = new Condition(new PercentScaling(0.01), 25, 120, 2, 15);
         final Map<String, PatternInstance> occuranceFreqMap = new ConcurrentHashMap<String, PatternInstance>();
@@ -79,14 +79,13 @@ public class ContextCreator
         for(final String securitySym : results.getSymbols())
         {
             tasks.add(new Callable<Void>() {
-                @Override
                 public Void call() throws Exception {
                     try {
 
                         System.out.println(securitySym);
                         Downloader d = new YahooDownloader();
-                        List<PriceRecord> prices = d.getPrices(securitySym, DateUtil.getDate(2001,1,1), new Date());
-                        computeFreq(results.getCondition().getTestScaling(), securitySym, prices, results.getCondition(), occuranceFreqMap);
+                        List<PriceRecord> prices = d.getPrices(securitySym, DateUtil.getDate(2016,1,1), new Date());
+                        computeFreq(results.getCondition().testScaling(), securitySym, prices, results.getCondition(), occuranceFreqMap);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -107,8 +106,8 @@ public class ContextCreator
         }
 
         DBCollection patternCollection = db.getCollection("patterns");
-        patternCollection.ensureIndex("pattern");
-        patternCollection.ensureIndex("score");
+        patternCollection.createIndex("pattern");
+        patternCollection.createIndex("score");
         int i = 0;
         int total = occuranceFreqMap.size();
         for(Map.Entry<String,PatternInstance> entry : occuranceFreqMap.entrySet())
@@ -195,23 +194,23 @@ public class ContextCreator
         for(int prIdx = 0; prIdx<prices.size(); prIdx++)
         {
             List<PFColumn> curCols = pfg.getColumnDateMap().get(prices.get(prIdx).getDateCode());
-            if(curCols.size()<testCondition.getMinPatternSize()+2) continue;
+            if(curCols.size()<testCondition.minPatternSize()+2) continue;
 
-            int maxPatternSize = Math.min(testCondition.getMaxPatternSize(), curCols.size() - testCondition.getMinPatternSize());
+            int maxPatternSize = Math.min(testCondition.maxPatternSize(), curCols.size() - testCondition.minPatternSize());
             boolean achievedReturn = false;
             BigDecimal runningPrice = prices.get(prIdx).getPrice();
-            for(int futureIdx = prIdx; futureIdx<=Math.min(prIdx+testCondition.getDaysHorizon(), prices.size()-1); futureIdx++)
+            for(int futureIdx = prIdx; futureIdx<=Math.min(prIdx+testCondition.daysHorizon(), prices.size()-1); futureIdx++)
             {
                 BigDecimal runningReturn = prices.get(futureIdx).getPrice().subtract(runningPrice).divide(runningPrice, 3, BigDecimal.ROUND_HALF_EVEN);
                 int intReturn = runningReturn.multiply(new BigDecimal(100)).intValue();
-                if(intReturn>testCondition.getPercentReturn())
+                if(intReturn>testCondition.percentReturn())
                 {
                     achievedReturn = true;
                     break;
                 }
             }
 
-            for(int patternSize = testCondition.getMinPatternSize(); patternSize <= maxPatternSize; patternSize++)
+            for(int patternSize = testCondition.minPatternSize(); patternSize <= maxPatternSize; patternSize++)
             {
                 String patternCode = PFColumnUtil.getPattern(curCols, patternSize);
 

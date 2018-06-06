@@ -20,14 +20,14 @@ public class ConditionDAO
     {
         DBCollection collection = db.getCollection(collectionName);
         BasicDBObject obj = new BasicDBObject();
-        if(condition.getTestScaling() instanceof PercentScaling)
+        if(condition.testScaling() instanceof PercentScaling)
         {
-            obj.append("percentScaling", ((PercentScaling) condition.getTestScaling()).getPercent());
+            obj.append("percentScaling", ((PercentScaling) condition.testScaling()).getPercent());
         }
-        obj.append("percentReturn", condition.getPercentReturn());
-        obj.append("daysHorizon", condition.getDaysHorizon());
-        obj.append("minPatternSize", condition.getMinPatternSize());
-        obj.append("maxPatternSize", condition.getMaxPatternSize());
+        obj.append("percentReturn", condition.percentReturn());
+        obj.append("daysHorizon", condition.daysHorizon());
+        obj.append("minPatternSize", condition.minPatternSize());
+        obj.append("maxPatternSize", condition.maxPatternSize());
         collection.insert(obj);
     }
 

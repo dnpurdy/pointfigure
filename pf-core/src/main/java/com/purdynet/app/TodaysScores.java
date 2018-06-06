@@ -58,10 +58,10 @@ public class TodaysScores
             try {
                 Downloader d = new YahooDownloader();
                 List<PriceRecord> prices = d.getPrices(securitySym, DateUtil.getDate(2001,1,1), new Date());
-                PointFigureGraph pfg = new PointFigureGraph(prices, tCond.getTestScaling());
+                PointFigureGraph pfg = new PointFigureGraph(prices, tCond.testScaling());
 
                 PresentScore ps = null;
-                for(int i = tCond.getMinPatternSize(); i<=tCond.getMaxPatternSize(); i++)
+                for(int i = tCond.minPatternSize(); i<=tCond.maxPatternSize(); i++)
                 {
                     if(ps==null)
                     {

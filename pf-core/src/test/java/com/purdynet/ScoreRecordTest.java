@@ -4,8 +4,8 @@ import com.purdynet.prices.ScoreRecord;
 import hirondelle.date4j.DateTime;
 import org.junit.Test;
 
-import static com.mongodb.util.MyAsserts.assertTrue;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created with IntelliJ IDEA.

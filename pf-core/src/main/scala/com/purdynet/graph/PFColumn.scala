@@ -1,0 +1,14 @@
+package com.purdynet.graph
+
+class PFColumn(var lowBoxIdx: Integer, var highBoxIdx: Integer, var columnType: ColumnType) {
+  def getLowBoxIdx = lowBoxIdx
+  def getHighBoxIdx = highBoxIdx
+  def getColumnType = columnType
+
+  def setLowBoxIdx(lowBoxIdx: Integer) = this.lowBoxIdx = lowBoxIdx
+  def setHighBoxIdx(highBoxIdx: Integer) = this.highBoxIdx = highBoxIdx
+  def setColumnType(columnType: ColumnType) = this.columnType = columnType
+
+  def getCode: String = if (columnType == ColumnType.X) getNumber.toString else "-" + getNumber.toString
+  def getNumber: Integer = highBoxIdx - lowBoxIdx + 1
+}
