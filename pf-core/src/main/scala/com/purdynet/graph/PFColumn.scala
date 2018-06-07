@@ -1,5 +1,7 @@
 package com.purdynet.graph
 
+import com.purdynet.graph.ColumnType.ColumnType
+
 class PFColumn(var lowBoxIdx: Integer, var highBoxIdx: Integer, var columnType: ColumnType) {
   def getLowBoxIdx = lowBoxIdx
   def getHighBoxIdx = highBoxIdx
@@ -14,5 +16,5 @@ class PFColumn(var lowBoxIdx: Integer, var highBoxIdx: Integer, var columnType: 
 
   def copy: PFColumn = new PFColumn(lowBoxIdx, highBoxIdx, columnType)
 
-  override def toString: String = getNumber + columnType.name
+  override def toString: String = getNumber + columnType.toString
 }

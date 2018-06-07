@@ -42,7 +42,7 @@ public class PointFigureGraph
             if(columns == null)
             {
                 columns = new ArrayList<PFColumn>();
-                columns.add(new PFColumn(currentPriceBoxIdx, currentPriceBoxIdx, ColumnType.X));
+                columns.add(new PFColumn(currentPriceBoxIdx, currentPriceBoxIdx, ColumnType.X()));
             }
             if(startPrice == null)
             {
@@ -51,28 +51,24 @@ public class PointFigureGraph
 
             PFColumn lastCol = columns.get(columns.size()-1);
 
-            switch(lastCol.getColumnType())
-            {
-                case X:
-                    if(lastCol.getHighBoxIdx() - currentPriceBoxIdx >= reversal)
-                    {
-                        columns.add(new PFColumn(currentPriceBoxIdx, lastCol.getHighBoxIdx()-1, ColumnType.O));
-                    }
-                    else
-                    {
-                        lastCol.setHighBoxIdx(Math.max(lastCol.getHighBoxIdx(),currentPriceBoxIdx));
-                    }
-                    break;
-                case O:
-                    if(currentPriceBoxIdx - lastCol.getLowBoxIdx() >= reversal)
-                    {
-                        columns.add(new PFColumn(lastCol.getLowBoxIdx()+1, currentPriceBoxIdx, ColumnType.X));
-                    }
-                    else
-                    {
-                        lastCol.setLowBoxIdx(Math.min(lastCol.getLowBoxIdx(),currentPriceBoxIdx));
-                    }
-                    break;
+            if (lastCol.columnType().equals(ColumnType.X())) {
+                if(lastCol.getHighBoxIdx() - currentPriceBoxIdx >= reversal)
+                {
+                    columns.add(new PFColumn(currentPriceBoxIdx, lastCol.getHighBoxIdx()-1, ColumnType.O()));
+                }
+                else
+                {
+                    lastCol.setHighBoxIdx(Math.max(lastCol.getHighBoxIdx(),currentPriceBoxIdx));
+                }
+            } else if (lastCol.columnType().equals(ColumnType.O())) {
+                if(currentPriceBoxIdx - lastCol.getLowBoxIdx() >= reversal)
+                {
+                    columns.add(new PFColumn(lastCol.getLowBoxIdx()+1, currentPriceBoxIdx, ColumnType.X()));
+                }
+                else
+                {
+                    lastCol.setLowBoxIdx(Math.min(lastCol.getLowBoxIdx(),currentPriceBoxIdx));
+                }
             }
 
             priceDateMap.put(pr.getDateStr(),pr.getJavaPrice());
@@ -171,16 +167,13 @@ public class PointFigureGraph
             for(int j=0; j<width; j++)
             {
                 PFColumn curCol = columns.get(j);
-                switch(columns.get(j).getColumnType())
-                {
-                    case X:
-                        if(curCol.getLowBoxIdx()<=i && curCol.getHighBoxIdx()>=i) sb.append("X");
-                        else sb.append(" ");
-                        break;
-                    case O:
-                        if(curCol.getLowBoxIdx()<=i && curCol.getHighBoxIdx()>=i) sb.append("O");
-                        else sb.append(" ");
-                        break;
+
+                if (columns.get(j).getColumnType().equals(ColumnType.X())) {
+                    if(curCol.getLowBoxIdx()<=i && curCol.getHighBoxIdx()>=i) sb.append("X");
+                    else sb.append(" ");
+                } else if (columns.get(j).getColumnType().equals(ColumnType.O())) {
+                    if(curCol.getLowBoxIdx()<=i && curCol.getHighBoxIdx()>=i) sb.append("O");
+                    else sb.append(" ");
                 }
             }
             System.out.println(sb.toString());

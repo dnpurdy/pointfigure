@@ -17,9 +17,9 @@ public class PFColumnTest
     @Test
     public void testPFColumnEquals()
     {
-        PFColumn pc1 = new PFColumn(1,1,ColumnType.X);
-        PFColumn pc2 = new PFColumn(1,1,ColumnType.X);
-        PFColumn pc3 = new PFColumn(2,3,ColumnType.O);
+        PFColumn pc1 = new PFColumn(1,1,ColumnType.X());
+        PFColumn pc2 = new PFColumn(1,1,ColumnType.X());
+        PFColumn pc3 = new PFColumn(2,3,ColumnType.O());
 
         assertEquals(pc1,pc2);
         assertNotEquals(pc2,pc3);
