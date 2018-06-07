@@ -123,7 +123,7 @@ public class PatternReader
 
     public List<PriceRecord> parseFile(File input) throws IOException
     {
-        List<PriceRecord> ret = new ArrayList<PriceRecord>();
+        List<PriceRecord> ret = new ArrayList<>();
         CSVReader reader = new CSVReader(new FileReader(input));
         String[] line;
         try {
@@ -131,7 +131,7 @@ public class PatternReader
             line = reader.readNext();
             while((line = reader.readNext()) != null)
             {
-                PriceRecord pr = new PriceRecord(line[0], new BigDecimal(line[6]));
+                PriceRecord pr = new PriceRecord(line[0], new scala.math.BigDecimal(new BigDecimal(line[6])));
                 ret.add(pr);
             }
         }

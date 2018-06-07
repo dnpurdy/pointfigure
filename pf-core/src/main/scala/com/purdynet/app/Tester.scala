@@ -3,7 +3,7 @@ package com.purdynet.app
 import java.util
 import java.util.Date
 
-import com.purdynet.data.Downloader
+import com.purdynet.data.SDownloader
 import com.purdynet.data.impl.YahooDownloader
 import com.purdynet.graph.PointFigureGraph
 import com.purdynet.prices.PriceRecord
@@ -16,14 +16,14 @@ import scala.collection.JavaConverters._
   * Created by dnpurdy on 11/2/16.
   */
 object Tester extends App {
-  val d: Downloader = new YahooDownloader
-  val prices = d.getPrices("SPY", DateUtil.getDate(2001, 1, 1), new Date)
+  val d: SDownloader = new YahooDownloader
+  val prices = d.getSPrices("SPY", DateUtil.getDate(2001, 1, 1), new Date)
   val scaling = new TraditionalScaling
-  val pfg: PointFigureGraph = new PointFigureGraph(prices, scaling)
+  val pfg: PointFigureGraph = new PointFigureGraph(prices.asJava, scaling)
 
   val daysForward = 90
 
-  def CMM0(pricesRemain: List[PriceRecord], prices: List[PriceRecord], accu: Map[String,(BigDecimal,BigDecimal)]): Map[String,(BigDecimal,BigDecimal)] ={
+  def CMM0(pricesRemain: Seq[PriceRecord], prices: Seq[PriceRecord], accu: Map[String,(BigDecimal,BigDecimal)]): Map[String,(BigDecimal,BigDecimal)] ={
     if (pricesRemain.isEmpty) accu
     else {
       val x = pricesRemain.head
@@ -31,15 +31,15 @@ object Tester extends App {
       var max = x
       for (y: PriceRecord <- prices) {
         if (x.daysBetween(y) > 0 && x.daysBetween(y) < daysForward) {
-          if (y.getPrice.compareTo(max.getPrice) > 0) max = y
-          if (y.getPrice.compareTo(min.getPrice) < 0) min = y
+          if (y.price.compareTo(max.price) > 0) max = y
+          if (y.price.compareTo(min.price) < 0) min = y
         }
       }
-      CMM0(pricesRemain.tail, prices, accu + (x.getDateCode -> (BigDecimal(min.getPrice.subtract(x.getPrice).divide(x.getPrice, 2)),BigDecimal(max.getPrice.subtract(x.getPrice).divide(x.getPrice, 2)))))
+      CMM0(pricesRemain.tail, prices, accu + (x.getDateStr -> ((((min.price - x.price) / (x.price)), (max.price - x.price) / (x.price)))))
     }
   }
 
-  def cMM(prices: List[PriceRecord]): Map[String,(BigDecimal,BigDecimal)] = {
+  def cMM(prices: Seq[PriceRecord]): Map[String,(BigDecimal,BigDecimal)] = {
     CMM0(prices, prices, Map())
   }
 
@@ -50,21 +50,21 @@ object Tester extends App {
       var max = x
       for (y: PriceRecord <- prices.asScala) {
         if (x.daysBetween(y) > 0 && x.daysBetween(y) < daysForward) {
-          if (y.getPrice.compareTo(max.getPrice) > 0) max = y
-          if (y.getPrice.compareTo(min.getPrice) < 0) min = y
+          if (y.price.compareTo(max.price) > 0) max = y
+          if (y.price.compareTo(min.price) < 0) min = y
         }
       }
-      System.out.println((x, ((min.getPrice.subtract(x.getPrice)).divide(x.getPrice, 2)),(max.getPrice.subtract(x.getPrice)).divide(x.getPrice, 2)))
+      System.out.println((x, ((((min.price - x.price) / (x.price)), (max.price - x.price) / (x.price)))))
     }
   }
 
-  val pS: List[PriceRecord] = prices.asScala.toList
+  val pS: Seq[PriceRecord] = prices
   val minmax = cMM(pS)
 
   for(pr <- pS) {
-    val pattern: String = pfg.getPattern(pr.getDateCode,4)
-    val min = minmax.get(pr.getDateCode).get._1
-    val max = minmax.get(pr.getDateCode).get._2
+    val pattern: String = pfg.getPattern(pr.getDateStr,4)
+    val min = minmax.get(pr.getDateStr).get._1
+    val max = minmax.get(pr.getDateStr).get._2
     val minus = if(min.compare(BigDecimal(-0.20)) < 0) "1" else "0"
     val minus20 = if(min.compare(BigDecimal(-0.20)) > 0 && min.compare(BigDecimal(-0.10)) < 0) "1" else "0"
     val minus10 = if(min.compare(BigDecimal(-0.10)) > 0 && min.compare(BigDecimal(-0.05)) < 0) "1" else "0"

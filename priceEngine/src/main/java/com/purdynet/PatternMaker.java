@@ -103,7 +103,7 @@ public class PatternMaker
 
     public List<PriceRecord> parseFile(File input) throws IOException
     {
-        List<PriceRecord> ret = new ArrayList<PriceRecord>();
+        List<PriceRecord> ret = new ArrayList<>();
         CSVReader reader = new CSVReader(new FileReader(input));
         String[] line;
         try {
@@ -111,7 +111,7 @@ public class PatternMaker
             line = reader.readNext();
             while((line = reader.readNext()) != null)
             {
-                PriceRecord pr = new PriceRecord(line[0], new BigDecimal(line[6]));
+                PriceRecord pr = new PriceRecord(line[0], new scala.math.BigDecimal(new BigDecimal(line[6])));
                 ret.add(pr);
             }
         }
@@ -129,22 +129,21 @@ public class PatternMaker
     private void computeFreq(Scaling s, String symbol, List<PriceRecord> prices, Condition testCondition, Map<String, Pattern> occuranceFreqMap)
     {
         Collections.sort(prices);
-        List<PriceRecord> pricesSoFar = new ArrayList<PriceRecord>();
         Map<String,Set<Integer>> patternLocations = new HashMap<String,Set<Integer>>();
 
         PointFigureGraph pfg = new PointFigureGraph(prices, s);
 
         for(int prIdx = 0; prIdx<prices.size(); prIdx++)
         {
-            List<PFColumn> curCols = pfg.getColumnDateMap().get(prices.get(prIdx).getDateCode());
+            List<PFColumn> curCols = pfg.getColumnDateMap().get(prices.get(prIdx).getDateStr());
             if(curCols.size()<testCondition.getMinPatternSize()+2) continue;
 
             int maxPatternSize = Math.min(testCondition.getMaxPatternSize(), curCols.size() - testCondition.getMinPatternSize());
             boolean achievedReturn = false;
-            BigDecimal runningPrice = prices.get(prIdx).getPrice();
+            BigDecimal runningPrice = prices.get(prIdx).getJavaPrice();
             for(int futureIdx = prIdx; futureIdx<=Math.min(prIdx+testCondition.getDaysHorizon(), prices.size()-1); futureIdx++)
             {
-                BigDecimal runningReturn = prices.get(futureIdx).getPrice().subtract(runningPrice).divide(runningPrice, 3, BigDecimal.ROUND_HALF_EVEN);
+                BigDecimal runningReturn = prices.get(futureIdx).getJavaPrice().subtract(runningPrice).divide(runningPrice, 3, BigDecimal.ROUND_HALF_EVEN);
                 int intReturn = runningReturn.multiply(new BigDecimal(100)).intValue();
                 if(intReturn>testCondition.getPercentReturn())
                 {

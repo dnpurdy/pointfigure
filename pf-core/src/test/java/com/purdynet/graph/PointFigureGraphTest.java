@@ -22,13 +22,13 @@ public class PointFigureGraphTest
     @Test
     public void testSimpleGraph()
     {
-        List<PriceRecord> testPrices = new ArrayList<PriceRecord>();
-        testPrices.add(new PriceRecord("2013-01-01", new BigDecimal(21.1)));
-        testPrices.add(new PriceRecord("2013-01-02", new BigDecimal(23.1)));
-        testPrices.add(new PriceRecord("2013-01-03", new BigDecimal(20.6)));
-        testPrices.add(new PriceRecord("2013-01-04", new BigDecimal(24.6)));
-        testPrices.add(new PriceRecord("2013-01-05", new BigDecimal(25.6)));
-        testPrices.add(new PriceRecord("2013-01-06", new BigDecimal(22.6)));
+        List<PriceRecord> testPrices = new ArrayList<>();
+        testPrices.add(new PriceRecord("2013-01-01", new scala.math.BigDecimal(new BigDecimal(21.1))));
+        testPrices.add(new PriceRecord("2013-01-02", new scala.math.BigDecimal(new BigDecimal(23.1))));
+        testPrices.add(new PriceRecord("2013-01-03", new scala.math.BigDecimal(new BigDecimal(20.6))));
+        testPrices.add(new PriceRecord("2013-01-04", new scala.math.BigDecimal(new BigDecimal(24.6))));
+        testPrices.add(new PriceRecord("2013-01-05", new scala.math.BigDecimal(new BigDecimal(25.6))));
+        testPrices.add(new PriceRecord("2013-01-06", new scala.math.BigDecimal(new BigDecimal(22.6))));
 
         PointFigureGraph pfg = new PointFigureGraph(testPrices, new TraditionalScaling());
 

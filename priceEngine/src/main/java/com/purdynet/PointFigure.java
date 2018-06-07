@@ -34,7 +34,7 @@ public class PointFigure {
 
         for(PriceRecord pr : prices)
         {
-            Integer currentPriceBoxIdx = s.getIdx(pr.getPrice());
+            Integer currentPriceBoxIdx = s.getIdx(pr.getJavaPrice());
             if(columns == null)
             {
                 columns = new ArrayList<PFColumns>();

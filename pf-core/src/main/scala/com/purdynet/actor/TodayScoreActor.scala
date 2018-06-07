@@ -7,13 +7,15 @@ import akka.actor.{Actor, ActorLogging}
 import com.mongodb.DB
 import com.purdynet.app.PresentScore
 import com.purdynet.condition.Condition
-import com.purdynet.data.Downloader
+import com.purdynet.data.SDownloader
 import com.purdynet.data.impl.YahooDownloader
 import com.purdynet.graph.PointFigureGraph
 import com.purdynet.message.{EmptyReply, TodayScoreWork}
 import com.purdynet.pattern.PatternInstance
 import com.purdynet.persistence.PatternDAO
 import com.purdynet.util.DateUtil
+
+import scala.collection.JavaConverters._
 
 /**
  * Created with IntelliJ IDEA.
@@ -33,9 +35,9 @@ class TodayScoreActor extends Actor with ActorLogging {
     val tCond: Condition = msg.testCondition
     val db: DB = msg.db
     try {
-      val d: Downloader = new YahooDownloader
-      val prices = d.getPrices(securitySym, DateUtil.getDate(2016, 1, 1), new Date)
-      val pfg: PointFigureGraph = new PointFigureGraph(prices, tCond.testScaling)
+      val d: SDownloader = new YahooDownloader
+      val prices = d.getSPrices(securitySym, DateUtil.getDate(2016, 1, 1), new Date)
+      val pfg: PointFigureGraph = new PointFigureGraph(prices.asJava, tCond.testScaling)
       var ps: PresentScore = null
       var i: Int = tCond.minPatternSize
       while (i <= tCond.maxPatternSize) {

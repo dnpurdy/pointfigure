@@ -20,8 +20,8 @@ public class ScoreRecordTest
     public void scoreRecordTest_1()
     {
         ScoreRecord sr = new ScoreRecord("2013-01-01", 35.6);
-        assertEquals(sr.getDate(), new DateTime("2013-01-01"));
-        assertEquals(sr.getScore(), new Double(35.6));
+        assertEquals(sr.date(), new DateTime("2013-01-01"));
+        assertEquals(new Double(sr.score()), new Double(35.6));
     }
 
     @Test

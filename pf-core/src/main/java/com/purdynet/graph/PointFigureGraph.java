@@ -1,13 +1,11 @@
 package com.purdynet.graph;
 
 import com.purdynet.prices.PriceRecord;
-import com.purdynet.prices.SPriceRecord;
 import com.purdynet.scaling.Scaling;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,9 +25,11 @@ public class PointFigureGraph
         return columnDateMapTwo;
     }
 
+    /*
     public PointFigureGraph(Scaling s, List<SPriceRecord> prices) {
         this(prices.stream().map(pr -> new PriceRecord(pr.getDateStr(), pr.getJavaPrice())).collect(Collectors.toList()), s);
     }
+    */
 
     public PointFigureGraph(List<PriceRecord> prices, Scaling s)
     {
@@ -44,7 +44,7 @@ public class PointFigureGraph
         Integer startPrice = null;
         for(PriceRecord pr : prices)
         {
-            Integer currentPriceBoxIdx = scaling.getIdx(pr.getPrice());
+            Integer currentPriceBoxIdx = scaling.getIdx(pr.getJavaPrice());
             if(columns == null)
             {
                 columns = new ArrayList<PFColumn>();
@@ -81,9 +81,9 @@ public class PointFigureGraph
                     break;
             }
 
-            priceDateMap.put(pr.getDateCode(),pr.getPrice());
-            columnDateMap.put(pr.getDateCode(),new ArrayList<PFColumn>(columns));
-            columnDateMapTwo.put(pr.getDateCode(), new PFColumnPartialReference(columns.size()-2, columns.get(columns.size()-1).toString()));
+            priceDateMap.put(pr.getDateStr(),pr.getJavaPrice());
+            columnDateMap.put(pr.getDateStr(),new ArrayList<PFColumn>(columns));
+            columnDateMapTwo.put(pr.getDateStr(), new PFColumnPartialReference(columns.size()-2, columns.get(columns.size()-1).toString()));
         }
     }
 

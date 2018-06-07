@@ -186,22 +186,21 @@ public class ContextCreator
     private void computeFreq(Scaling s, String symbol, List<PriceRecord> prices, Condition testCondition, Map<String, PatternInstance> occuranceFreqMap)
     {
         Collections.sort(prices);
-        List<PriceRecord> pricesSoFar = new ArrayList<PriceRecord>();
         Map<String,Set<Integer>> patternLocations = new HashMap<String,Set<Integer>>();
 
         PointFigureGraph pfg = new PointFigureGraph(prices, s);
 
         for(int prIdx = 0; prIdx<prices.size(); prIdx++)
         {
-            List<PFColumn> curCols = pfg.getColumnDateMap().get(prices.get(prIdx).getDateCode());
+            List<PFColumn> curCols = pfg.getColumnDateMap().get(prices.get(prIdx).getDateStr());
             if(curCols.size()<testCondition.minPatternSize()+2) continue;
 
             int maxPatternSize = Math.min(testCondition.maxPatternSize(), curCols.size() - testCondition.minPatternSize());
             boolean achievedReturn = false;
-            BigDecimal runningPrice = prices.get(prIdx).getPrice();
+            BigDecimal runningPrice = prices.get(prIdx).getJavaPrice();
             for(int futureIdx = prIdx; futureIdx<=Math.min(prIdx+testCondition.daysHorizon(), prices.size()-1); futureIdx++)
             {
-                BigDecimal runningReturn = prices.get(futureIdx).getPrice().subtract(runningPrice).divide(runningPrice, 3, BigDecimal.ROUND_HALF_EVEN);
+                BigDecimal runningReturn = prices.get(futureIdx).getJavaPrice().subtract(runningPrice).divide(runningPrice, 3, BigDecimal.ROUND_HALF_EVEN);
                 int intReturn = runningReturn.multiply(new BigDecimal(100)).intValue();
                 if(intReturn>testCondition.percentReturn())
                 {
