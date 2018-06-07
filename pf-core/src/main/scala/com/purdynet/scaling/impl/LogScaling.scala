@@ -21,3 +21,7 @@ class LogScaling(var factor: Double) extends AbstractScaling {
     values.add(i)
   }
 }
+
+object LogScaling {
+  val ONE_FIVE = new LogScaling(1.5)
+}

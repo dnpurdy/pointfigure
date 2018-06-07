@@ -5,7 +5,6 @@ import java.util.Date
 import com.purdynet.data.SDownloader
 import com.purdynet.graph.{PFGRenderer, PointFigureGraph}
 import com.purdynet.prices.PriceRecord
-import com.purdynet.scaling.Scaling
 import com.purdynet.scaling.impl.TraditionalScaling
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -23,8 +22,7 @@ class TodaySpringScores(val downloader: SDownloader, val renderer: PFGRenderer) 
     for (i <- 1 to 100) {
       val prices: Seq[PriceRecord] = downloader.getSPrices("GNCA", new Date(1405564800000L), new Date(1528243200000L))
 
-      val s: Scaling = new TraditionalScaling
-      val pfg: PointFigureGraph = new PointFigureGraph(prices.asJava, s)
+      val pfg: PointFigureGraph = new PointFigureGraph(prices.asJava, TraditionalScaling.scale)
       renderer.render(pfg)
     }
   }

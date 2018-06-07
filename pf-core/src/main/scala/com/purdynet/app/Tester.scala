@@ -18,7 +18,7 @@ import scala.collection.JavaConverters._
 object Tester extends App {
   val d: SDownloader = new YahooDownloader
   val prices = d.getSPrices("SPY", DateUtil.getDate(2001, 1, 1), new Date)
-  val scaling = new TraditionalScaling
+  val scaling = TraditionalScaling.scale
   val pfg: PointFigureGraph = new PointFigureGraph(prices.asJava, scaling)
 
   val daysForward = 90

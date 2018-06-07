@@ -61,9 +61,9 @@ public class SymbolHistory
         PointFigureGraph pfg = new PointFigureGraph(prices, tCond.testScaling());
 
         List<ScoreRecord> scoreRecords = new ArrayList<ScoreRecord>();
-        for(String dateCode : pfg.getColumnDateMap().keySet())
+        for(String dateCode : pfg.getDates())
         {
-            List<PFColumn> curCols = pfg.getColumnDateMap().get(dateCode);
+            List<PFColumn> curCols = pfg.getCurCols(dateCode);
             if(curCols.size()<tCond.minPatternSize()+2) continue;
 
             int maxPatternSize = Math.min(tCond.maxPatternSize(), curCols.size() - tCond.minPatternSize());

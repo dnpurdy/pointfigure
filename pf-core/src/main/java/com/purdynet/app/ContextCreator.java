@@ -192,7 +192,7 @@ public class ContextCreator
 
         for(int prIdx = 0; prIdx<prices.size(); prIdx++)
         {
-            List<PFColumn> curCols = pfg.getColumnDateMap().get(prices.get(prIdx).getDateStr());
+            List<PFColumn> curCols = pfg.getCurCols(prices.get(prIdx).getDateStr());
             if(curCols.size()<testCondition.minPatternSize()+2) continue;
 
             int maxPatternSize = Math.min(testCondition.maxPatternSize(), curCols.size() - testCondition.minPatternSize());

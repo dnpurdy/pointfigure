@@ -21,17 +21,11 @@ public class PointFigureGraph
     private Map<String,PFColumnPartialReference> columnDateMapTwo = new HashMap<String,PFColumnPartialReference>();
     private List<PFColumn> columns;
 
-    public Map<String, PFColumnPartialReference> getColumnDateMapTwo() {
-        return columnDateMapTwo;
+    public PointFigureGraph(List<PriceRecord> prices, Scaling s) {
+        this(prices, s, 3);
     }
 
-    /*
-    public PointFigureGraph(Scaling s, List<SPriceRecord> prices) {
-        this(prices.stream().map(pr -> new PriceRecord(pr.getDateStr(), pr.getJavaPrice())).collect(Collectors.toList()), s);
-    }
-    */
-
-    public PointFigureGraph(List<PriceRecord> prices, Scaling s)
+    public PointFigureGraph(List<PriceRecord> prices, Scaling s, Integer reversal)
     {
         this.scaling = s;
 
@@ -60,7 +54,7 @@ public class PointFigureGraph
             switch(lastCol.getColumnType())
             {
                 case X:
-                    if(lastCol.getHighBoxIdx() - currentPriceBoxIdx >= 3)
+                    if(lastCol.getHighBoxIdx() - currentPriceBoxIdx >= reversal)
                     {
                         columns.add(new PFColumn(currentPriceBoxIdx, lastCol.getHighBoxIdx()-1, ColumnType.O));
                     }
@@ -70,7 +64,7 @@ public class PointFigureGraph
                     }
                     break;
                 case O:
-                    if(currentPriceBoxIdx - lastCol.getLowBoxIdx() >= 3)
+                    if(currentPriceBoxIdx - lastCol.getLowBoxIdx() >= reversal)
                     {
                         columns.add(new PFColumn(lastCol.getLowBoxIdx()+1, currentPriceBoxIdx, ColumnType.X));
                     }
@@ -82,32 +76,34 @@ public class PointFigureGraph
             }
 
             priceDateMap.put(pr.getDateStr(),pr.getJavaPrice());
-            columnDateMap.put(pr.getDateStr(),new ArrayList<PFColumn>(columns));
+            columnDateMap.put(pr.getDateStr(),deepCopy(columns));
             columnDateMapTwo.put(pr.getDateStr(), new PFColumnPartialReference(columns.size()-2, columns.get(columns.size()-1).toString()));
         }
     }
 
-    public Scaling getScaling()
-    {
-        return scaling;
+    private List<PFColumn> deepCopy(List<PFColumn> in) {
+        List<PFColumn> out = new ArrayList<>(in.size());
+        for (PFColumn col : in) {
+            out.add(col.copy());
+        }
+        return out;
     }
 
-    public Map<String, BigDecimal> getPriceDateMap()
+    public List<BigDecimal> getScalingValues()
     {
-        return priceDateMap;
+        return scaling.getValues();
     }
 
-    public Map<String, List<PFColumn>> getColumnDateMap()
-    {
-        return columnDateMap;
+    public List<PFColumn> getCurCols(final String dateString) {
+        if (columnDateMap.containsKey(dateString)) return columnDateMap.get(dateString);
+        else return new ArrayList<>();
     }
 
-    public List<PFColumn> getColumns()
-    {
-        return columns;
+    public Set<String> getDates() {
+        return columnDateMap.keySet();
     }
 
-    public String getPattern(String datecode)
+    public String getPattern(final String datecode)
     {
         PFColumnPartialReference ref = columnDateMapTwo.get(datecode);
         if(ref.stopColIdx()<0) return ref.postfixCol();
@@ -170,7 +166,7 @@ public class PointFigureGraph
         {
             StringBuilder sb = new StringBuilder();
             DecimalFormat myFormatter = new DecimalFormat("00000.000");
-            String output = myFormatter.format(getScaling().getValues().get(i));
+            String output = myFormatter.format(getScalingValues().get(i));
             System.out.print(output+": ");
             for(int j=0; j<width; j++)
             {
@@ -192,5 +188,4 @@ public class PointFigureGraph
             if(blankCount==5) break;
         }
     }
-
 }

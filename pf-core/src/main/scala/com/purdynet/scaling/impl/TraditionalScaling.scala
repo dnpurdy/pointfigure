@@ -32,3 +32,7 @@ class TraditionalScaling() extends AbstractScaling {
     i = i.add(inc)
   }
 }
+
+object TraditionalScaling {
+  val scale = new TraditionalScaling
+}

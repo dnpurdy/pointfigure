@@ -135,7 +135,7 @@ public class PatternMaker
 
         for(int prIdx = 0; prIdx<prices.size(); prIdx++)
         {
-            List<PFColumn> curCols = pfg.getColumnDateMap().get(prices.get(prIdx).getDateStr());
+            List<PFColumn> curCols = pfg.getCurCols(prices.get(prIdx).getDateStr());
             if(curCols.size()<testCondition.getMinPatternSize()+2) continue;
 
             int maxPatternSize = Math.min(testCondition.getMaxPatternSize(), curCols.size() - testCondition.getMinPatternSize());

@@ -11,4 +11,8 @@ class PFColumn(var lowBoxIdx: Integer, var highBoxIdx: Integer, var columnType: 
 
   def getCode: String = if (columnType == ColumnType.X) getNumber.toString else "-" + getNumber.toString
   def getNumber: Integer = highBoxIdx - lowBoxIdx + 1
+
+  def copy: PFColumn = new PFColumn(lowBoxIdx, highBoxIdx, columnType)
+
+  override def toString: String = getNumber + columnType.name
 }
